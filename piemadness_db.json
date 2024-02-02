@@ -1,0 +1,2015 @@
+{
+    "Items": [
+        {
+            "secret": {
+                "S": "02fbf1e7-a99f-4037-b66f-a55931a4581c"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/c6061bb8-5ccb-4090-b3d4-100db1fa071a.jpg"
+            },
+            "lastName": {
+                "S": "hemerlein"
+            },
+            "timestamp": {
+                "N": "1643753475085"
+            },
+            "favoritePie": {
+                "S": "pumpkin"
+            },
+            "user": {
+                "S": "dan hemerlein"
+            },
+            "SK": {
+                "S": "USER#861f4f6d-4ca1-44af-b05c-25735ed4deca"
+            },
+            "PK": {
+                "S": "USER#861f4f6d-4ca1-44af-b05c-25735ed4deca"
+            },
+            "firstName": {
+                "S": "dan"
+            }
+        },
+        {
+            "secret": {
+                "S": "c41dba75-b6a7-48a6-82e8-6dcb4c1c33d3"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/a8594c61-ebed-493e-b4fa-e2224d61f68c.jpg"
+            },
+            "lastName": {
+                "S": "Shastri"
+            },
+            "timestamp": {
+                "N": "1614012055587"
+            },
+            "favoritePie": {
+                "S": "Key Lime"
+            },
+            "user": {
+                "S": "Gaurav Shastri"
+            },
+            "SK": {
+                "S": "USER#df2a360a-ded9-4129-9d60-5adb4883bcbc"
+            },
+            "PK": {
+                "S": "USER#df2a360a-ded9-4129-9d60-5adb4883bcbc"
+            },
+            "firstName": {
+                "S": "Gaurav"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1647187797929"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#48a60167-47b8-49bd-be72-13d8f18c3e86"
+            },
+            "text": {
+                "S": "**Strawberry Rhubarb (1) over Blueberry Peach (4), 21-14**\n\nIt remains unclear whether Blueberry Peach will ever come into its own, but for now Strawberry Rhubarb takes it home and is showing everyone why it was billed as the pie to beat. \n\n**Maple Bourbon Brown Butter Peach (3) over Banoffee (2), 22-14**\n\nMB3P pulls out with a victory over Banoffee in this second round matchup. These pies had never battled against each other before and this round showed that MB3P has the edge. If MB3P is able to overtake Strawberry Rhubarb in the next round, then it’ll make its 3rd ever Final Four.\n\n**Maple Pecan Cream (4) over Oreo Nutella (1), 25-11**\n\nWell, it finally happened. Oreo Nutella has lost in a voting round. It took rookie pie Maple Pecan Cream in a surprisingly decisive vote as this ties the biggest victory this round. Oreo Nutella is still clearly a top pie, but fans of the pie hope this loss doesn’t signify the beginning of its downfall. MPC on the other hand is very quickly trending upwards as this year’s new “it” pie.\n\n**Lemon Raspberry (2) over Peanut Butter (3), 20-15**\n\nIn this light n fruity vs creamy and sweet matchup, Lemon Raspberry takes the victory and continues its surprising run from a year ago. Since the pie tasted nice and refreshing last year, it’ll have and interesting matchup against the more wintery MPC in the next round.\n\n**Mississippi Mud (1) over Sweet Potato (4), 20-15**\n\nAs the premier chocolate pie, Mississippi Mud has the full support of chocolate fans, and it needed it all for this matchup against classic American pie Sweet Potato. Fans of Sweet Potato are once against disappointed by this showing, but they can’t be too discouraged as the pie put up a good fight against one of the top pies in the tournament.\n\n**Key Lime (2) over Strawberry Cheesecake (3) 24-12**\n\nKey Lime has a momentum like its never had before, and here it rode past Strawberry Cheesecake easily. While some pie fans are debating whether Strawberry Cheesecake pie should even be in the tournament, Key Lime is preparing for the biggest matchup of its life against top pie Mississippi Mud.\n\n**Blueberry (1) over Guava Cream Cheese Handpies (4), 21-15**\n\nIt was close in the beginning, but in the end Blueberry was able to take a victory over the uniquely shaped Guava Cream Cheese Handpies. With Blueberry once again making a deep tournament run, it’s now just one victory away from its 4th Final Four appearance\n\n**Chocolate Pretzel (6) over Apple (2), 24 -12**\n\nOnce again the biggest upset is saved for last as Chocolate Pretzel shocks the world by beating Apple in the biggest upset of this tournament so far. It may be too early to start thinking about 2023 but Apple definitely has some thinking to do for whether it will stay with its traditional ways or try to change things up as it tries to fix its lack of tournament victories. Chocolate Pretzel on the other hand is hoping it can pull off one more shocking upset to make the Final Four."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Round 2 Results!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644615940600"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#4dc7288c-d497-4658-a30b-c972b403f94c"
+            },
+            "text": {
+                "S": "Are you excited for a new Pie Madness tournament?!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Welcome to Pie Madness 2022"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/82c0ca25-7f38-4bfb-bf75-e36b78bf99a2.png"
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1645570657938"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#762604e4-222a-443e-a690-8c702536950d"
+            },
+            "text": {
+                "S": "Pie Madness 2022 is under way! Below is the 2022 bracket. If you want to participate in the 2022 bracket contest, you can download a fillable PDF version of the bracket below. Just predict what you think the results will be and send your filled bracket to [brackets@piemadness.com](mailto:brackets@piemadness.com). The winner of the bracket contest gets to join the 2023 Pie Madness Selection Committee and help craft the 2023 Pie Madness Bracket! Full rules for the bracket contest are in the about section.\n\nThe schedule for the 2022 contest will be\n\n- First Round: March 1-6\n- Second Round: March 7-12\n- Third Round: March 13-18\n- Final Four: TBA, likely March 27\n\n[Click here to download a blank 2022 Pie Madness bracket](https://www.dropbox.com/s/ixocl62nwol6xox/PieMadness2022BracketForDownload.pdf?dl=0)\n\nWhich pies are you excited about? What’s disappointing about this bracket? LET’S HEAR IT"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Pie Madness 2022!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1646667424655"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#7d43ce21-2bb8-4877-8ee0-5b7e71aa1740"
+            },
+            "text": {
+                "S": "Voting for Round 2 has now begun! Click the link below to vote.\n\n[ROUND 2 VOTING](https://docs.google.com/forms/d/e/1FAIpQLSdAls7HgLeDinzHVQcGOwhwepjIlQMYafRcz3mDSgTwJmyOVA/viewform?usp=sf_link)"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Round 2 Begins!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1647139552604"
+            },
+            "user": {
+                "S": "USER#861f4f6d-4ca1-44af-b05c-25735ed4deca"
+            },
+            "SK": {
+                "S": "POST#9d62953f-99e4-4abd-8f4f-f261cdd49016"
+            },
+            "text": {
+                "S": "uhhhhhhh"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "test"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1646660961136"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#bea5a94e-21c7-491f-8dff-b7e1373e070e"
+            },
+            "text": {
+                "S": "**Strawberry Rhubarb (1) over Black Bottom Oatmeal (8), 20-8**\n\nBlack Bottom Oatmeal put up a decent showing against a tough opponent, but no surprises here as the #1 overall pie Strawberry Rhubarb overtakes BBO in a matchup that wasn’t very close\n\n**Blueberry Peach (4) over Lemon Meringue (5), 16-12**\n\n4 vs 5 seed matchups are usually quite close and this was no different. The voting was a little back and forth in the beginning but Blueberry Peach ultimately pulled away with most of the last votes.\n\n**Maple Bourbon Brown Butter Peach (3) over Apple Cranberry (6), 23-5**\n\nIs this the comeback year for MB3P? Not only has the pie received some extra attention from the pie community, but it also easily handled last year’s surprise victor Apple Cranberry.\n\n**Banoffee (2) over Dragonfruit (7), 16-12**\n\nBanoffee has been trending upwards since last year’s Enjoyable Eight appearance, but the return of Dragonfruit almost spoiled everything. In the end, Banoffee came through with most of the final votes and is ready for a tough matchup against MB3P.\n\n**Oreo Nutella (1) over Crust (8), 18-10**\n\nCrust followers were excited about this matchup against the commonly disliked Oreo Nutella, but once again the Oreo Nutella fans came out to vote and left Crust in the dust. ON remains undefeated in online head to head matchups.\n\n**Maple Pecan Cream (4) vs Mixed Berry (5), 20-8**\n\nMPC came out of the gate fast garnering almost all of the first 10 votes and never looked back. This new pie is now the lone remaining cream pie and has an interesting matchup against Oreo Nutella next round.\n\n**Peanut Butter (3) over Chai (6), 15-13**\n\nThere was lots of pre-tournament excitement for Chai Pie, but it faced a tough matchup against cult classic Peanut Butter Pie and ultimately couldn’t overcome its creamy peanut butter flavors in this barnburner.\n\n**Lemon Raspberry (2) over Rum Raisin Pecan (7), 19-9**\n\nReturning champions don’t often go very far in Pie Madness, but Lemon Raspberry has at least gotten past the first round over new creation Rum Raisin Pecan. Is it time for Lemon Raspberry to make another run?\n\n**Mississippi Mud (1) over Sour Orange (8), 16-12**\n\nThis was nearly a shocker! Sour Orange came out and took a solid lead over top pie Mississippi Mud, but ultimately the chocolately popularity of Mud prevailed in this nail biter. \n\n**Sweet Potato (4) over Chocolate Cherry Chess (5), 18-10**\n\nThere’s a lot of hope for Sweet Potato this year as it returns to its traditional self and kicks off with a victory over troubled Chocolate Cherry Chess. It was a close one, but Chocolate Cherry Chess now has two first round exits after winning the whole competition in 2020 and stands to not be included in 2023.\n\n**Strawberry Cheesecake (3) over Piña Colada (6), 19-9**\n\nThough the thought of a cheesecake pie doesn’t sit well with every pie fan, Strawberry Cheesecake has at least been able to take out Coconut Cream replacement Piña Colada in a matchup that was never very close to begin with.\n\n**Key Lime (2) vs Chocolate Orange Chess (7), 20-8**\n\nKey Lime fans swear 2022 is finally their year, and it’s hard to find any argument against that. With one of the biggest margin of victories in the first round and plenty of buzz in the community, Key Lime is focused on Strawberry Cheesecake and ready for more.\n\n**Blueberry (1) over Peanut Pie with Coca Cola Glaze (8), 22-6**\n\nBlueberry has been one of the premier pies of the tournament and it showed that here with an easy victory. Plenty of pie fans started talking about Peanut with Coca Cola Glaze, but was it positive? Remains to be seen whether the pie will return for another year.\n\n**Guava Cream Cheese Handpies (4) over Spiced Pumpkin (5), 15-13**\n\nIt was a close one throughout with some back and forth, but Guava Cream Cheese was able to hold on over Spiced Pumpkin. This marks the first ever victory for Guava Cream Cheese Handpies.\n\n**Chocolate Pretzel (6) over Banana Cream (3) , 17-10**\n\nBanana Cream hasn’t fared well since its Final Four appearance in 2018 now with only 2 wins in its last 4 years. Believe it or not, this marks the biggest upset of the first round.\n\n**Apple (2) over Cookie Dough Ice Cream (7), 14-13**\n\nAnd to close out the first round we have what was almost the biggest shocker of the tournament so far. Rookie pie Cookie Dough Ice Cream came within one vote of the conventionally popular Apple. This matchup was close throughout but Cookie Dough Ice Cream held its lead since the start. It wasn’t until the last few hours that Apple started surging and took the lead with just 2 hours remaining."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Round 1 Results!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1647614852054"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#bfa90c42-4261-4ddc-be37-65923ed643a2"
+            },
+            "text": {
+                "S": "**Maple Bourbon Brown Butter Peach (3) over Strawberry Rhubarb (1), 19-14**\n\nSince the beginning of Pie Madness, no pie has ever won it all multiple times. Strawberry Rhubarb was on a mission to change that this year with a sense of renewed energy, but this upset showed that there’s another former champion that might have what it takes. Maple Bourbon Brown Butter Peach has been a fan favorite since it burst on to the pie scene and won it all in 2019, but has since been disappointing minus one Final Four appearance in 2020. This victory flips the script against Strawberry Rhubarb as MB3P is now primed to be a repeat champion with its past experience. It’s not just the only pie in the 2022 Final Four who has won it all before, but is also the only pie who has ever been in a Final Four before.\n\n**Maple Pecan Cream (4) over Lemon Raspberry (2), 21-12**\n\nThis matchup put the surprisingly successful mid-seeded Maple Pecan Cream against the surprise mid-seeded winner of last year, Lemon Raspberry. In the most decisive victory of this round, Maple Pecan Cream came out on top over the deliciously refreshing Lemon Raspberry. As the only remaining representative of cream pies and the ghost Pecan pie, it appears as though MPC has successfully brought together different creeds of pie fans and will have a go in the final round.\n\n**Key Lime (2) over Mississippi Mud (1), 19-14**\n\nIt’s the Final Four at last for Key Lime. Key Lime has been a strong contender every year but has always fallen just short of the final round. From the start, 2022 has felt different for the pie as KL has garnered a special amount of hype it hasn’t seen in previous years. This victory over Mississippi Mud cements that 2022 is a special year for Key Lime and signals that the famous chocolate pie may be getting a little stale for some pie fans. Key Lime now enters the Final Four as the favorite to win it all.\n\n**Chocolate Pretzel (6) over Blueberry (1), 17-16**\n\nAnd once again, thanks to Chocolate Pretzel, the last result here is the biggest upset. The first two upsets by Chocolate Pretzel over Banana Cream and Apple were quite surprising, but it didn’t feel like anything would come of it. This one-vote win by Chocolate Pretzel over top-seeded Blueberry puts CP in a whole other conversation as it’s proven that it’s serious. With the fall of Mississippi Mud, chocolate fans will surely flock towards Chocolate Pretzel to give it a boost in the final round."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Round 2 Results!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1647188872165"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#e774b32a-9443-4407-bf35-890d95bb508a"
+            },
+            "text": {
+                "S": "Voting for Round 3 has now begun! Click the link below to vote.\n\n[ROUND 3 VOTING](https://docs.google.com/forms/d/e/1FAIpQLSfEfgqVHNGOrEVCo9Gs1Dl6pcAEiJ596Js4c-HrkaE62-RAvg/viewform?usp=sf_link)"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Round 3 Begins!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1646141684623"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#fe13fbcb-054e-48b0-ac11-612d11e56a9a"
+            },
+            "text": {
+                "S": "Voting for Round 1 has now begun! Click the link below to vote.\n\n[ROUND 1 VOTING](https://docs.google.com/forms/d/e/1FAIpQLSc3m2zxtR6YSouXtkzQ8kVV3OvPJMOZyxjlG_e_aPG61kkWHw/viewform?usp=sf_link)\n\nAdditionally, the due date to submit a bracket for the bracket contest has been extended to midnight on March 4! Submit a bracket by downloading one [here](https://www.dropbox.com/s/ixocl62nwol6xox/PieMadness2022BracketForDownload.pdf?dl=0) filling it out on a computer and sending it to brackets@piemadness.com. If you are having trouble figuring out how to submit a bracket or don't have access to a computer the commissioner can help! Just send an email to commish@piemadness.com"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2022"
+            },
+            "title": {
+                "S": "Round 1 begins!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1678548584454"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#20788218-0907-4e14-bca6-68f36aee38f9"
+            },
+            "text": {
+                "S": "**Key Lime (1) defeats Banana Cream (5), 31-26**\n\nBanana Cream started with a big lead of almost 10 votes but eventually succumbed to the tart and creamy flavor of Key Lime. Banana Cream Beleivers hope to start a stronger campaign next year.\n\n**Maple Pecan Cream (2) defeats Lemon Raspberry Chiffon (3), 31-26**\n\nThis matchup was neck and neck the whole way, but Maple Pecan Cream emerged victorious with a big surge on the final day. The Key Lime region is now guaranteed to have a Final Four pie from 2022.\n\n**Maple Bourbon Brown Butter Peach (1) defeats Peanut Butter (4), 37-19**\n\nThis matchup was never very close as MB3P is now 1 round away from yet another Final Four. Peanut Butter fans simply did not come out very strong this year\n\n**Blueberry (2) defeats Coconut Cream (6), 31-26**\n\nCoconut Cream had a big lead to start off as fans of cream pies voted early, but the premier Single Berry Pie slowly worked its way to a tie on the second to last day then pulled away with the final votes.\n\n**Strawberry Rhubarb (1) defeats Sweet Potato (4), 40-17**\n\nThe biggest blowout of the second round, Sweet Potato never had a chance against the perfect combination of sweet and tart in Strawberry Rhubarb. Strawberry Rhubarb is now heavily favored to make the Final Four for the fourth time in its career.\n\n**Blood Orange Ricotta (7) defeats Pecan (6), 32-25**\n\nIn the battle of the underdogs the bigger underdog won this round. BOR took a massive first half lead and, though Pecan was able to work back within 7 votes, it wasn’t enough to catch this rookie pie that’s starting to turn the heads of pie fans everywhere\n\n**Mississippi Mud (1) defeats Strawberry Cheesecake (4), 33-24**\n\nChocolate pie fans rejoice as their premier pie Mississippi Mud beats Strawberry Cheesecake. Though the final score indicates a somewhat close contest, Strawberry Cheesecake never got too close to threatening Mississippi Mud in this one.\n\n**Bayou Goo (7) defeats Coffee Banoffee (3), 32-25**\n\nBanoffee was unable to reach the Enjoyable Eight for the first time since 2021, but its still found a great flavormate in coffee. It's possible the pie just ran into a buzzsaw in rookie sensation Bayou Goo. Bayou Goo now has a tough and murky matchup against fellow chocolate pie Mississippi Mud.\n"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "Round 2 Results!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1678114469426"
+            },
+            "user": {
+                "S": "USER#da6404a0-d32c-4e05-8377-319c274c3254"
+            },
+            "SK": {
+                "S": "POST#22ae89f0-6c9e-46c1-8714-6d40364f3a68"
+            },
+            "text": {
+                "S": "Second round voting is now open!\n[Click here](https://forms.gle/X2UaXKptLV6dhcKC9) to vote for your favorite pies by March 10"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "Second Round Voting"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1678939497802"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#2354b2e5-79f1-4510-bd58-ba15bb8ac1f5"
+            },
+            "text": {
+                "S": "**Key Lime (1) over Maple Pecan Cream (2), 29-16**\n\nMPC justified its 2 seed with an Enjoyable Eight appearance but is unable to match its Final Four run from last year as it runs into last year’s champion Key Lime. Key Lime started the first five years of Pie Madness without a single Final Four appearance but has now turned in 2 straight runs to the final showdown. No pie has ever won Pie Madness twice and Key Lime now has a golden opportunity to do the unthinkable and win two straight Pie Madnesses.\n\n**Maple Bourbon Brown Butter Peach (1) over Blueberry (2), 26-19**\n\nComing into this matchup, both MB3P and Blueberry were tied (along with Strawberry Rhubarb) for the most Final Four appearances with 3. With a big victory here, MB3P is now the first pie to ever make 4 Final Fours with this symbolic victory over Blueberry and has accomplished this feat with a 2 year disadvantage as the pie didn’t debut until 2019. With a victory in the Final Four, MB3P would cement itself as the undisputed most successful pie in Pie Madness History.\n\n**Blood Orange Ricotta (7) over Strawberry Rhubarb (1), 31-14**\n\nThis is what Pie Madness is all about! An upset for the ages as Blood Orange Ricotta demolished Strawberry Rhubarb with one of the biggest margins of victory we’ve seen all tournament. Nobody could have seen this coming as the rookie Blood Orange Ricotta pulled off upsets at every turn and now finishes off its miraculous online voting run with a commanding victory over one of the most storied pies in Pie Madness history.\n\n**Bayou Goo (7) over Mississippi Mud (1), 29-16**\n\nAnother 7 seed beating a 1 seed, this one is slightly less surprising given the matchup and pre-tournament buzz for the #GooCrew though a shocker nonetheless. Bayou Goo proved to the Pie Selection Committee that it deserved a debut better than a 7 seed by making the Enjoyable Eight and now has a chance to win the whole tournament. Mississippi Mud goes home no longer sure if it’s the premier chocolate pie as Bayou Goo offers chocolate as well as cheesecake and pecans."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "Third round results!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1678082566096"
+            },
+            "user": {
+                "S": "USER#da6404a0-d32c-4e05-8377-319c274c3254"
+            },
+            "SK": {
+                "S": "POST#3a9d02dd-ae40-49ef-9cc5-3f81540c0845"
+            },
+            "text": {
+                "S": "Key Lime (1) defeats Tropical Key Lime (8), 32-21\nLast year’s champion goes against a comparable competitor and has no problems moving on\n\nBanana Cream (5) defeats Brown Butter Apple with Cheddar (4), 32-22\nIn what was the closest matchup of the first round for most of the week, Banana Cream pulls away with a last minute victory with a massive streak at the end to pull away with a 10 vote win\n\nLemon Raspberry Chiffon (3) defeats Chai (6), 30-24\nFor most of the final day Chai had a thin lead, but Lemon Raspberry Chiffon skims by the upstart Chai taking most of the final votes.\n\nMaple Pecan Cream (2) defeats Dragonfruit Ice Cream w Brownie (7), 41-13\nDragonfruit fans thought they had the combo of the future, but instead they got blown out in the most lopsided matchup of the first round \n\nMaple Bourbon Brown Butter Peach (1) defeats Irish Coffee Crème Brûlée (8), 34-20\nIrish Coffee Crème Brûlée had an early lead, but the star power of the most successful pie in Pie Madness history was too much to overcome.\n\nPeanut Butter (4) defeats Blackberry (5), 29-25\nAnother barn burner that went back and forth, Peanut Butter moves on and looks forward to a tough 2nd round matchup.\n\nCoconut Cream (6) defeats Chocolate Pretzel (3), 30-24\nAfter a year off Coconut Cream looks rested and pulls off a sizable upset defeating last year’s Final Four chocolate darling \n\nBlueberry (2) defeats Cookie Dough Ice Cream (7), 37-16\nThis one wasn’t a fair fight as the premier SBP (Single Berry Pie) easily takes down CDIC\n\nStrawberry Rhubarb (1) defeats Sour Orange (8), 38-15\nCitrus pies may be in style, but that doesn’t mean Sour Orange can take down fan favorite Strawberry Rhubarb\n\nSweet Potato (4) defeats Peach Handpies (5), 35-19\nHandpies haven’t had the most success in Pie Madness and Peach will second guessing it’s decision to team up with them all offseason long.\n\nPecan (6) defeats Strawbrie Handpies (3), 31-23\nBig upset win for Pecan as Pecan fans must feel justified with their calls to have been seeded higher.\n\nBlood Orange Ricotta (7) defeats Chocolate Cream with Oreo (2), 31-23\nThis might be the biggest upset of the first round. Chocolate Cream with Oreo thought it made an improvement by dropping Nutella, but instead it loses in shocking fashion to rookie pie Blood Orange Ricotta\n\nMississippi Mud (1) defeats Mint Chocolate Chip (8), 36-18\nThis chocolate v chocolate matchup ends up with Mississippi Mud asserting its chocolate dominance\n\nStrawberry Cheesecake (4) defeats Lemon Meringue (5), 27-26\nThe closest matchup of the whole first round, these two pies see sawed back and forth with the lead until the clock struck midnight and Strawberry Cheesecake happened to hold the lead by one vote \n\nCoffee Banoffee (3) defeats Very Peary Cherry (6), 31-23\nVery Peary Cherry had a strong showing as a graveyard pie last year, and it enjoyed a sizable lead throughout the week, but Coffee Banoffee went on a big streak of the week at the end to put an end to this otherwise close matchup\n\nBayou Goo (7) defeats Apple (2), 30-24\nThe final matchup of the first round, and it ends with a bang. Bayou Goo marks its entrance to the tournament with a massive victory over world famous Apple. Bayou Goo started with a big lead and Apple came within a couple votes mid week but couldn’t complete the victory. "
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "Round 1 Results!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "poll": {
+                "S": ""
+            },
+            "image": {
+                "S": ""
+            },
+            "timestamp": {
+                "N": "1677012054998"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#46b54557-b4fb-4755-8565-dbf4cb110367"
+            },
+            "text": {
+                "S": "Are you ready for Pie Madness 2023!? Below is the 2023 bracket. To participate in the 2023 bracket contest, you can download a PDF version of the bracket below. Just predict what you think the results will be and send your filled bracket to [brackets@piemadness.com](mailto:brackets@piemadness.com). The winner of the bracket contest gets to join the 2024 Pie Madness Selection Committee and help craft the 2024 Pie Madness Bracket! Full rules for the bracket contest are in the about section.\n\nThe schedule for the 2023 contest will be\n\n- First Round: March 1-5\n\n- Second Round: March 6-10\n\n- Third Round: March 11-15\n\n- Final Four: March 19\n\n[Click here to download a blank 2023 Pie Madness bracket](https://www.dropbox.com/s/lzmjn0zzt1fp98o/PieMadness2023BracketForDownload.pdf?dl=0)\n\nWhich pies are you excited about? What’s disappointing about this bracket? LET’S HEAR IT!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "2023 Bracket Released"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "poll": {
+                "S": ""
+            },
+            "image": {
+                "S": ""
+            },
+            "timestamp": {
+                "N": "1677002227237"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#8e1230ac-89f1-480a-9e54-4888707297b7"
+            },
+            "text": {
+                "S": "Pie Madness 2023 is coming! The bracket will be released on February 21 and, as always, voting will begin on March 1. Strap in for another exciting season!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "Pie Madness 2023 is Approaching!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1677682567725"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#c4d49d15-b927-4505-885c-f46d1f532865"
+            },
+            "text": {
+                "S": "Round 1 voting is open!\n\n[Click here](https://forms.gle/SZ2WtVgjYXGcX8Yp9) to vote for your favorite pies!\n\nThe bracket contest is open or submissions until tomorrow, [click here](https://piemadness.com/posts/2023/46b54557-b4fb-4755-8565-dbf4cb110367) if you would like to enter\n\nMay your favorite pie win "
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "Round 1 Voting!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1678839465805"
+            },
+            "user": {
+                "S": "USER#da6404a0-d32c-4e05-8377-319c274c3254"
+            },
+            "SK": {
+                "S": "POST#d8ef1a53-8b57-426b-8e26-dd9638c2b81d"
+            },
+            "text": {
+                "S": "Third round voting is live now!\n[Click here](https://forms.gle/kfWpMVy2q5cmUVyD7)to vote "
+            },
+            "PK": {
+                "S": "POST#CONTEST#2023"
+            },
+            "title": {
+                "S": "Third round voting!"
+            }
+        },
+        {
+            "secret": {
+                "S": "805bef57-313e-482d-b5d7-c386707e9378"
+            },
+            "image": {
+                "S": "https://i.pinimg.com/originals/09/42/60/094260c03e66fd5b262c185f224927b0.jpg"
+            },
+            "lastName": {
+                "S": "Ochoa"
+            },
+            "timestamp": {
+                "N": "1613943096574"
+            },
+            "favoritePie": {
+                "S": "pear blue cheese "
+            },
+            "user": {
+                "S": "Bernardo Ochoa"
+            },
+            "SK": {
+                "S": "USER#1a20ace3-c3e4-4de7-96ab-6c56ee8d6d18"
+            },
+            "PK": {
+                "S": "USER#1a20ace3-c3e4-4de7-96ab-6c56ee8d6d18"
+            },
+            "firstName": {
+                "S": "Bernardo"
+            }
+        },
+        {
+            "secret": {
+                "S": "61b540c8-ddd7-4e06-8088-26c645e96fb7"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/d7f5eea1-5af6-4982-bccc-0e7e870b0215.jpeg"
+            },
+            "lastName": {
+                "S": "lane"
+            },
+            "timestamp": {
+                "N": "1678082527781"
+            },
+            "favoritePie": {
+                "S": ""
+            },
+            "user": {
+                "S": "evan lane"
+            },
+            "SK": {
+                "S": "USER#da6404a0-d32c-4e05-8377-319c274c3254"
+            },
+            "PK": {
+                "S": "USER#da6404a0-d32c-4e05-8377-319c274c3254"
+            },
+            "firstName": {
+                "S": "evan"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "COMMENT#a10f1816-072b-4413-872a-28552254abf9"
+            },
+            "text": {
+                "S": "nice"
+            },
+            "PK": {
+                "S": "POST#9d62953f-99e4-4abd-8f4f-f261cdd49016"
+            },
+            "timestamp": {
+                "N": "1647141588778"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#861f4f6d-4ca1-44af-b05c-25735ed4deca"
+            },
+            "SK": {
+                "S": "COMMENT#e018c3c4-0fa3-4e11-bfcd-dfa0794251b2"
+            },
+            "text": {
+                "S": "nice"
+            },
+            "PK": {
+                "S": "POST#9d62953f-99e4-4abd-8f4f-f261cdd49016"
+            },
+            "timestamp": {
+                "N": "1647139566927"
+            }
+        },
+        {
+            "SK": {
+                "S": "NOTIFICATION#USER#861f4f6d-4ca1-44af-b05c-25735ed4deca#POST#9d62953f-99e4-4abd-8f4f-f261cdd49016"
+            },
+            "post": {
+                "S": "POST#9d62953f-99e4-4abd-8f4f-f261cdd49016"
+            },
+            "PK": {
+                "S": "NOTIFICATION#USER#861f4f6d-4ca1-44af-b05c-25735ed4deca"
+            },
+            "title": {
+                "S": "test"
+            },
+            "timestamp": {
+                "N": "1647141588778"
+            }
+        },
+        {
+            "secret": {
+                "S": "9477c020-87d5-4b18-8140-3b676782db72"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/fc1c6cb8-c31c-40a1-9797-50d1f071d236.jpg"
+            },
+            "lastName": {
+                "S": "Narotsky"
+            },
+            "timestamp": {
+                "N": "1613940414357"
+            },
+            "favoritePie": {
+                "S": "Mixed Berry Cobbler"
+            },
+            "user": {
+                "S": "Andy Narotsky"
+            },
+            "SK": {
+                "S": "USER#9548bdd3-0c40-41ab-b09e-a9e5efcc4836"
+            },
+            "PK": {
+                "S": "USER#9548bdd3-0c40-41ab-b09e-a9e5efcc4836"
+            },
+            "firstName": {
+                "S": "Andy"
+            }
+        },
+        {
+            "secret": {
+                "S": "86b970a6-dabe-4f3b-9fbe-7db13a305f4e"
+            },
+            "image": {
+                "S": "https://i1.sndcdn.com/avatars-000566130810-y378xl-t240x240.jpg"
+            },
+            "lastName": {
+                "S": "Crust-sen"
+            },
+            "timestamp": {
+                "N": "1644454669919"
+            },
+            "favoritePie": {
+                "S": "apple, sorry not sorry"
+            },
+            "user": {
+                "S": "Pie-becca Crust-sen"
+            },
+            "SK": {
+                "S": "USER#1e98a8d8-fc96-4f90-b97d-c410d9168e7e"
+            },
+            "PK": {
+                "S": "USER#1e98a8d8-fc96-4f90-b97d-c410d9168e7e"
+            },
+            "firstName": {
+                "S": "Pie-becca"
+            }
+        },
+        {
+            "secret": {
+                "S": "fa733942-a3d9-4886-a3b5-6bf79cc83331"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/311cf796-a897-48b9-9944-383aede50459.jpg"
+            },
+            "lastName": {
+                "S": "Pie"
+            },
+            "timestamp": {
+                "N": "1646705349945"
+            },
+            "favoritePie": {
+                "S": "all"
+            },
+            "user": {
+                "S": "Pop Pie"
+            },
+            "SK": {
+                "S": "USER#df7f4fd1-54d9-403b-aa66-483375bd5577"
+            },
+            "PK": {
+                "S": "USER#df7f4fd1-54d9-403b-aa66-483375bd5577"
+            },
+            "firstName": {
+                "S": "Pop"
+            }
+        },
+        {
+            "secret": {
+                "S": "545b0260-99fb-480a-ba61-ca1b9f2c1cbd"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/09df0a56-d64b-451c-8abc-149eb8b6f4d9.jpg"
+            },
+            "lastName": {
+                "S": "Schwed"
+            },
+            "timestamp": {
+                "N": "1644264775666"
+            },
+            "favoritePie": {
+                "S": "Bayou Goo Pie"
+            },
+            "user": {
+                "S": "Christina Schwed"
+            },
+            "SK": {
+                "S": "USER#fc5495f6-8d62-41b6-baed-7eef962e9637"
+            },
+            "PK": {
+                "S": "USER#fc5495f6-8d62-41b6-baed-7eef962e9637"
+            },
+            "firstName": {
+                "S": "Christina"
+            }
+        },
+        {
+            "secret": {
+                "S": "7fa47d18-200f-4597-a0cb-b1ed677d1ed6"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/f98e5116-3171-4cb3-91f6-02f027ee5a83.jpeg"
+            },
+            "lastName": {
+                "S": "(Jess Meyers)"
+            },
+            "timestamp": {
+                "N": "1646762722049"
+            },
+            "favoritePie": {
+                "S": ""
+            },
+            "user": {
+                "S": "Chess Piers (Jess Meyers)"
+            },
+            "SK": {
+                "S": "USER#ba13ae3f-d4f9-4985-be5e-2744f23c8ba4"
+            },
+            "PK": {
+                "S": "USER#ba13ae3f-d4f9-4985-be5e-2744f23c8ba4"
+            },
+            "firstName": {
+                "S": "Chess Piers"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "COMMENT#370bc390-73af-4c48-9744-31b524858979"
+            },
+            "text": {
+                "S": "very excited"
+            },
+            "PK": {
+                "S": "POST#4dc7288c-d497-4658-a30b-c972b403f94c"
+            },
+            "timestamp": {
+                "N": "1645130398984"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#dca13be1-36f7-4f54-8811-f009330b9b59"
+            },
+            "SK": {
+                "S": "COMMENT#61ee3763-b139-4721-b9c7-c00e7c0a4c50"
+            },
+            "text": {
+                "S": "pie\n"
+            },
+            "PK": {
+                "S": "POST#4dc7288c-d497-4658-a30b-c972b403f94c"
+            },
+            "timestamp": {
+                "N": "1645550245366"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "COMMENT#c358a447-b3ac-4d72-b891-61f604055f4f"
+            },
+            "text": {
+                "S": "yes!"
+            },
+            "PK": {
+                "S": "POST#4dc7288c-d497-4658-a30b-c972b403f94c"
+            },
+            "timestamp": {
+                "N": "1645130027460"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#22045cd8-ffd1-4b3c-8f8a-58df8c92eee8"
+            },
+            "SK": {
+                "S": "COMMENT#b75309fe-45e6-45e6-885a-f3e0fd8e5187"
+            },
+            "text": {
+                "S": "this seems fishy to me...what do the weezer fans have to say about this???"
+            },
+            "PK": {
+                "S": "POST#4f991cd3-56ad-49f9-bced-175c23052e7b"
+            },
+            "timestamp": {
+                "N": "1614010664410"
+            }
+        },
+        {
+            "SK": {
+                "S": "NOTIFICATION#USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982#POST#4dc7288c-d497-4658-a30b-c972b403f94c"
+            },
+            "post": {
+                "S": "POST#4dc7288c-d497-4658-a30b-c972b403f94c"
+            },
+            "PK": {
+                "S": "NOTIFICATION#USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "title": {
+                "S": "Welcome to Pie Madness 2022"
+            },
+            "timestamp": {
+                "N": "1645550245366"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/40bfc6ad-8473-42f4-b5f3-e49d2788bef6.jpg"
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644533574890"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#f31ba8d5-855d-4947-84f0-f2f7ff487b65"
+            },
+            "text": {
+                "S": "Blueberry Pie wins Pie Madness 2018!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2018"
+            },
+            "title": {
+                "S": "Final Bracket 2018"
+            }
+        },
+        {
+            "secret": {
+                "S": "cb96cc44-91b2-4a45-afb7-250ddc0b6731"
+            },
+            "image": {
+                "S": "https://scontent-hou1-1.xx.fbcdn.net/v/t1.6435-9/89551792_10159436179334112_5870136939671191552_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=dvMPzvlmcrMAX-jSHZJ&_nc_ht=scontent-hou1-1.xx&oh=00_AT9UHOTMSq251Gu1_z_SgdVsZ4FTDNeLzvY0Fc0ATB96Qg&oe=623CCA5C"
+            },
+            "lastName": {
+                "S": "Burrus"
+            },
+            "timestamp": {
+                "N": "1645589238990"
+            },
+            "favoritePie": {
+                "S": "Bayou goo"
+            },
+            "user": {
+                "S": "Evan Burrus"
+            },
+            "SK": {
+                "S": "USER#4baafe0c-3a84-45ed-b0db-4d3167c25aba"
+            },
+            "PK": {
+                "S": "USER#4baafe0c-3a84-45ed-b0db-4d3167c25aba"
+            },
+            "firstName": {
+                "S": "Evan"
+            }
+        },
+        {
+            "secret": {
+                "S": "fe7fc8b9-f66e-4462-bc05-b4fe3ac227dc"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/1c7beb15-54b9-44d0-a56c-87bdadc6ad01.jpeg"
+            },
+            "lastName": {
+                "S": "Berlin"
+            },
+            "timestamp": {
+                "N": "1619487530624"
+            },
+            "favoritePie": {
+                "S": "Guava Cheese Hand Pies"
+            },
+            "user": {
+                "S": "Deanna Berlin"
+            },
+            "SK": {
+                "S": "USER#c6748090-00b5-4891-81aa-5e516a763369"
+            },
+            "PK": {
+                "S": "USER#c6748090-00b5-4891-81aa-5e516a763369"
+            },
+            "firstName": {
+                "S": "Deanna"
+            }
+        },
+        {
+            "secret": {
+                "S": "45b31c51-e464-476f-9b3a-f6a625af8254"
+            },
+            "image": {
+                "S": "https://cdn.shopify.com/s/files/1/1921/3233/articles/SUNCORE_FOODS_BLOG_PURPLE_SWEET_POTATO_SUPERCOLOR_POWDER_large.jpg?v=1676496581"
+            },
+            "lastName": {
+                "S": "Roe"
+            },
+            "timestamp": {
+                "N": "1677952819449"
+            },
+            "favoritePie": {
+                "S": "Sweet Potato"
+            },
+            "user": {
+                "S": "Lori Roe"
+            },
+            "SK": {
+                "S": "USER#10a794ba-e13d-4c7f-8ef7-617c6003f06f"
+            },
+            "PK": {
+                "S": "USER#10a794ba-e13d-4c7f-8ef7-617c6003f06f"
+            },
+            "firstName": {
+                "S": "Lori"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#78c57a4e-f5a5-4dca-8478-5be9695ae263"
+            },
+            "SK": {
+                "S": "COMMENT#0a2d13a9-07f0-4468-8e56-4fc3fe775b7b"
+            },
+            "text": {
+                "S": "I chai’d to be reasonable with all of you but have been left severely chiffed"
+            },
+            "PK": {
+                "S": "POST#3a9d02dd-ae40-49ef-9cc5-3f81540c0845"
+            },
+            "timestamp": {
+                "N": "1678101334670"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/e4e8395e-5315-4c5b-9527-0657af3dea1d.jpg"
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644533890200"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#f5286924-9677-48bb-9a19-1473c2c2e78f"
+            },
+            "text": {
+                "S": "Strawberry Rhubarb wins the first ever Pie Madness in 2017!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2017"
+            },
+            "title": {
+                "S": "Final Bracket 2017"
+            }
+        },
+        {
+            "secret": {
+                "S": "c90e2b3c-997c-4d73-8f83-489d899d339f"
+            },
+            "image": {
+                "S": "https://fiverr-res.cloudinary.com/t_main1,q_auto,f_auto/gigs/55992584/original/fec00ed97f4a34aa074ba7ecbcfd3557704fa8b7.png"
+            },
+            "lastName": {
+                "S": "Sheeran"
+            },
+            "timestamp": {
+                "N": "1677191684833"
+            },
+            "favoritePie": {
+                "S": "Bean Pie (like from Abu's in Bed Stuy)"
+            },
+            "user": {
+                "S": "Henry Sheeran"
+            },
+            "SK": {
+                "S": "USER#f9695572-071d-45ab-a2a2-16c26c5a3782"
+            },
+            "PK": {
+                "S": "USER#f9695572-071d-45ab-a2a2-16c26c5a3782"
+            },
+            "firstName": {
+                "S": "Henry"
+            }
+        },
+        {
+            "secret": {
+                "S": "7fbab118-fb1b-44ae-8698-c1a5edb50b38"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/043a352f-eeba-4dca-81a0-bc338323ef06.jpg"
+            },
+            "lastName": {
+                "S": "Belle"
+            },
+            "timestamp": {
+                "N": "1644350117234"
+            },
+            "favoritePie": {
+                "S": "Cherry"
+            },
+            "user": {
+                "S": "Elly Belle"
+            },
+            "SK": {
+                "S": "USER#9c126684-dd0a-4576-829a-f927cc6ae5df"
+            },
+            "PK": {
+                "S": "USER#9c126684-dd0a-4576-829a-f927cc6ae5df"
+            },
+            "firstName": {
+                "S": "Elly"
+            }
+        },
+        {
+            "secret": {
+                "S": "cdd55cf0-ae99-42ab-b95a-61f2a0bf6af3"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/d9273f9c-d519-4842-945d-93e3fd49ec79.jpeg"
+            },
+            "lastName": {
+                "S": "Geskin"
+            },
+            "timestamp": {
+                "N": "1678101292604"
+            },
+            "favoritePie": {
+                "S": "Blueberry "
+            },
+            "user": {
+                "S": "Jacob Geskin"
+            },
+            "SK": {
+                "S": "USER#78c57a4e-f5a5-4dca-8478-5be9695ae263"
+            },
+            "PK": {
+                "S": "USER#78c57a4e-f5a5-4dca-8478-5be9695ae263"
+            },
+            "firstName": {
+                "S": "Jacob"
+            }
+        },
+        {
+            "secret": {
+                "S": "c174683f-2153-434d-8947-67d312ec3273"
+            },
+            "image": {
+                "S": "https://kathdedon.files.wordpress.com/2010/08/happy-apple-pie-2.jpg"
+            },
+            "lastName": {
+                "S": "Barry"
+            },
+            "timestamp": {
+                "N": "1677117674650"
+            },
+            "favoritePie": {
+                "S": "Atlantic Beach"
+            },
+            "user": {
+                "S": "Grace Barry"
+            },
+            "SK": {
+                "S": "USER#565444a0-797f-48d3-a685-ce537bc57672"
+            },
+            "PK": {
+                "S": "USER#565444a0-797f-48d3-a685-ce537bc57672"
+            },
+            "firstName": {
+                "S": "Grace"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/ce47f76b-8322-4baa-b28a-935055aeb46b.png"
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644532854197"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#f7411af6-170b-484e-88fc-a86163ad8a21"
+            },
+            "text": {
+                "S": "Weezer Pie wins Pie Madness 2020! This year featured a virtual pie debate instead of an in-person tasting Final Four."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2020"
+            },
+            "title": {
+                "S": "Final Bracket 2020"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/35873568-b64f-4c9e-a601-422db046bd1b.jpeg"
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644533338018"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#bc513a20-8a48-4b1b-831a-3e1a6fc116e9"
+            },
+            "text": {
+                "S": "Maple Bourbon Brown Butter Peach Pie wins Pie Madness 2019!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2019"
+            },
+            "title": {
+                "S": "Final Bracket 2019"
+            }
+        },
+        {
+            "secret": {
+                "S": "0911e545-735b-4a94-b6d9-94915fb4a000"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/72cbd83f-5787-4301-a8c6-633d13ddf15d.jpg"
+            },
+            "lastName": {
+                "S": "Kenner"
+            },
+            "timestamp": {
+                "N": "1677121430631"
+            },
+            "favoritePie": {
+                "S": "Pecan"
+            },
+            "user": {
+                "S": "Philip Kenner"
+            },
+            "SK": {
+                "S": "USER#c8ee970e-1ee5-4c0e-bd60-976f2becbc33"
+            },
+            "PK": {
+                "S": "USER#c8ee970e-1ee5-4c0e-bd60-976f2becbc33"
+            },
+            "firstName": {
+                "S": "Philip"
+            }
+        },
+        {
+            "secret": {
+                "S": "dded53e0-343a-4524-ad61-f62d91f17e54"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/85ddb47f-eb8c-4561-8567-563cdb444d42.jpeg"
+            },
+            "lastName": {
+                "S": "LINKS"
+            },
+            "timestamp": {
+                "N": "1644253096779"
+            },
+            "favoritePie": {
+                "S": "MBBBP"
+            },
+            "user": {
+                "S": "Andrew LINKS"
+            },
+            "SK": {
+                "S": "USER#74d8e449-7a0a-4672-98a1-2ba135fcc641"
+            },
+            "PK": {
+                "S": "USER#74d8e449-7a0a-4672-98a1-2ba135fcc641"
+            },
+            "firstName": {
+                "S": "Andrew"
+            }
+        },
+        {
+            "secret": {
+                "S": "86aed08f-00e9-4219-9e06-217d139054c1"
+            },
+            "image": {
+                "S": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaD7BvGyhCBLKbG2byAWBAZ0t4o_zGzdEgIw&usqp=CAU"
+            },
+            "lastName": {
+                "S": "(Deanna’s friend) Popkin"
+            },
+            "timestamp": {
+                "N": "1678748962280"
+            },
+            "favoritePie": {
+                "S": "Blueberry sour cream streusel "
+            },
+            "user": {
+                "S": "Emma (Deanna’s friend) Popkin"
+            },
+            "SK": {
+                "S": "USER#a1bcf2ed-e6a8-499c-a494-33114e5ee5d8"
+            },
+            "PK": {
+                "S": "USER#a1bcf2ed-e6a8-499c-a494-33114e5ee5d8"
+            },
+            "firstName": {
+                "S": "Emma"
+            }
+        },
+        {
+            "secret": {
+                "S": "ca7c032e-8edb-4297-8625-1762ea63001c"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/8fe5ad24-94a3-4539-8b70-90c9c799af17.png"
+            },
+            "lastName": {
+                "S": "Osteen"
+            },
+            "timestamp": {
+                "N": "1677125842712"
+            },
+            "favoritePie": {
+                "S": "lemon meringue"
+            },
+            "user": {
+                "S": "Chad Osteen"
+            },
+            "SK": {
+                "S": "USER#62ee00fe-b82e-45a1-9a62-f05818c17690"
+            },
+            "PK": {
+                "S": "USER#62ee00fe-b82e-45a1-9a62-f05818c17690"
+            },
+            "firstName": {
+                "S": "Chad"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#10a794ba-e13d-4c7f-8ef7-617c6003f06f"
+            },
+            "SK": {
+                "S": "COMMENT#1d1c6755-afd9-468b-a6af-62f6a3b421b9"
+            },
+            "text": {
+                "S": "Is there an updated bracket somewhere?"
+            },
+            "PK": {
+                "S": "POST#22ae89f0-6c9e-46c1-8714-6d40364f3a68"
+            },
+            "timestamp": {
+                "N": "1678836543227"
+            }
+        },
+        {
+            "secret": {
+                "S": "f21189de-d5f9-40e6-9899-457471184fca"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/c8d5e1a8-26c0-4174-b18c-bb19b71bf5c0.png"
+            },
+            "lastName": {
+                "S": "Aster"
+            },
+            "timestamp": {
+                "N": "1678939954682"
+            },
+            "favoritePie": {
+                "S": "Corporate pie!!!!"
+            },
+            "user": {
+                "S": "Rachel Aster"
+            },
+            "SK": {
+                "S": "USER#f522eed1-2743-4f4a-a0cc-c7f24910bcc8"
+            },
+            "PK": {
+                "S": "USER#f522eed1-2743-4f4a-a0cc-c7f24910bcc8"
+            },
+            "firstName": {
+                "S": "Rachel"
+            }
+        },
+        {
+            "secret": {
+                "S": "83aa04f2-b92c-4500-a70f-39355c97153a"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/53888d58-61c7-429f-8cf9-fd63651790af.jpeg"
+            },
+            "lastName": {
+                "S": "Kyriazis"
+            },
+            "timestamp": {
+                "N": "1675642025600"
+            },
+            "favoritePie": {
+                "S": "Mint Fernet Bang Bang Pie"
+            },
+            "user": {
+                "S": "Will Kyriazis"
+            },
+            "SK": {
+                "S": "USER#d342d0d9-db77-4317-93ea-8842c51a5f87"
+            },
+            "PK": {
+                "S": "USER#d342d0d9-db77-4317-93ea-8842c51a5f87"
+            },
+            "firstName": {
+                "S": "Will"
+            }
+        },
+        {
+            "secret": {
+                "S": "04bd960d-8a0f-4314-a4b4-8ba6e8383259"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/780d544b-2579-4548-81a6-4b1cfdd6ce9f.jpg"
+            },
+            "lastName": {
+                "S": "lane (commish)"
+            },
+            "timestamp": {
+                "N": "1613935696191"
+            },
+            "favoritePie": {
+                "S": "Lemon Meringue"
+            },
+            "user": {
+                "S": "evan lane (commish)"
+            },
+            "SK": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "PK": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "firstName": {
+                "S": "evan"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "poll": {
+                "S": ""
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/68e60b58-0980-4e78-ab11-6164c4e9b90a.png"
+            },
+            "timestamp": {
+                "N": "1613937458692"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#02f790d7-f8ac-4126-af67-20f157ad9bc0"
+            },
+            "text": {
+                "S": "Pie Madness 2021 is under way! Below is the 2021 bracket. If you want to participate in the 2021 bracket contest, you can download a fillable PDF version of the bracket below. Just predict what you think the results will be and send your filled bracket to [brackets@piemadness.com](mailto:brackets@piemadness.com). The winner of the bracket contest gets to join the 2022 Pie Madness Selection Committee and help craft the 2022 Pie Madness Bracket! Full rules for the bracket contest are in the about section.\n\npiemadness.com is still very new and may have some issues. If you have any issues or suggestions for improvement with the site, please email [commish@piemadness.com](mailto:commish@piemadness.com) . You can also participate in Pie Madness on Facebook. \n\nThe schedule for the 2021 contest will be\n\n- First Round: March 1-6\n- Second Round: March 7-12\n- Third Round: March 13-18\n- Final Four: Will be announced later ;)\n\n[Click here to download a blank 2021 Pie Madness bracket](https://www.dropbox.com/s/5rtayulguclf97w/PieMadness2021BracketForDownload.pdf?dl=0)\n\nWhich pies are you excited about? What’s disappointing about this bracket? LET’S HEAR IT"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "Welcome, Pie Fans!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644264843063"
+            },
+            "user": {
+                "S": "USER#fc5495f6-8d62-41b6-baed-7eef962e9637"
+            },
+            "SK": {
+                "S": "POST#0a33f6bd-435b-49fb-9806-85bafaa0b206"
+            },
+            "text": {
+                "S": "I'm ready to make the pies, judge the pies, and eat the pies!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "SO STOKED FOR 2022"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1618167234976"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#43c093ae-3380-4f21-8f81-8bf5a86dd1d4"
+            },
+            "text": {
+                "S": "Voting is open now! Voting closes April 18.\n\n[Click here](https://docs.google.com/forms/d/e/1FAIpQLSexByKtbHF0fPXznYJs8oxzKqmF2qg2qLEpTaiJNrs2iwrIaw/viewform?usp=sf_link) to vote in round 3!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "Round 3 voting is open!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1613938010843"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#4f991cd3-56ad-49f9-bced-175c23052e7b"
+            },
+            "text": {
+                "S": "Anybody else think it's pretty mysterious that Weezer pie isn't in the competition after winning it all last year?! I noticed Chocolate Cherry Chess but, that's not Weezer..."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "NO WEEZER PIE?!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644459496234"
+            },
+            "user": {
+                "S": "USER#1e98a8d8-fc96-4f90-b97d-c410d9168e7e"
+            },
+            "SK": {
+                "S": "POST#512a1271-b63d-42ca-9140-8826de63642d"
+            },
+            "text": {
+                "S": "LFG."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "lfg"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1615143814073"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#55927c95-a3bf-4dae-aaf9-0664c0b3da43"
+            },
+            "text": {
+                "S": "**Blueberry (1) over Mock Apple (8), 32-9**\n\nIn a total blowout, one of the most popular pies in all of Pie Madness eliminates a peculiar newcomer. It’s likely this is the last we’ll see of Mock Apple.\n\n**Blueberry Peach Custard (5) over Lemon Meringue (4), 22-19**\n\nIt was a nail biter, but in the end Lemon Meringue disappoints again and Blueberry Peach Custard gets a ticket to face off against its sibling Blueberry.\n\n**Haitian Sweet Potato (6) over Chocolate Cherry Chess (3), 28-13**\n\nShocking result for this one! The reincarnation of last year’s winner loses in a first-round upset to upstart Haitian Sweet Potato. HSP held a comfortable lead throughout the week and is already a hot upset pick in round 2.\n\n**Strawberry Rhubarb (2) over S’mores (7), 30-11**\n\nFormer champion Strawberry Rhubarb handles S’mores quite easily in this first round matchup. This continues a trend of chocolate pies that aren’t named Mississippi Mud having a tough time in the first round.\n\n**Maple Bourbon Brown Butter Peach (1) over Chocolate Pretzel (8), 21-20**\n\nWOW this one was close! Chocolate Pretzel actually held a lead the held through the first few days, but ultimately MB3P squeaks out a victory and prevents the second ever 8 seed victory. MB3P fans must feel awfully nervous after this performance though.\n\n**Lemon Raspberry (5) over Brown Butter Pecan (4), 22-19**\n\nBrown Butter Pecan may have lots of deep flavor, but it didn’t have enough to pull off the win over Lemon Raspberry. Lemon Raspberry now gets ready to face off against a second straight Brown Butter pie.\n\n**Mixed Berry Cobbler Pie (3) over Orange Creamsicle (6), 28-13**\n\nThe first ever Cobbler Pie wins this one in resounding fashion. If Mixed Berry Cobbler Pie wins another matchup or two, expect to see another cobbler pie in 2022.\n\n**Key Lime (2) over Black Bottom Oatmeal (7), 27-14**\n\nWith a resounding victory from Key Lime and weak win from MB3P, Key Lime looks ahead to the next round as perhaps the favorite of the MB3P region.\n\n**Oreo Nutella (1) over Shoofly (8), 29-12**\n\nIs Oreo Nutella a corporate pie or is it just delicious? This dividing pie is nonetheless able to win easily over Shoofly, but not without some first round controversy.\n\n**Maple Cream (5) over Pumpkin Meringue (4), 28-13**\n\nPumpkin Meringue never had much of a chance in this one. It’s a little surprising to see such a classic pie lose in the first round, but Pie Experts are now wondering if this pie should stay in its classic form.\n\n**Banoffee (3) over Coconut Cream (6), 29-12**\n\nThis was a controversial matchup for the cream team because I guess Banoffee is a cream pie for some reason?? But Coconut Cream just wasn’t able to get any momentum once again.\n\n**Apple Cranberry Slab (7) over Chocolate Banana Cream (2), 21-20**\n\nA total shocker! Though we’ve seen an 8 seed win in 2019 (Mocha Cream over Banana Cream), this marks the first time in Pie Madness history a 7 seed has ever won a matchup. While this sends a message to all future Pie Selection Committees that perhaps Banana Cream isn’t a premier pie, it also marks the introduction of a new Pie Madness darling: Apple Cranberry Slab.\n\n**Apple (1) over Crust (8), 27-14**\n\nAlas, Crust wasn’t able to pull off the major upset as Apple easily moves on to the next round. The joke’s on everyone though, since no matter which pie wins it all, it will definitely have crust.\n\n**Strawberry Cheesecake (4) over PB+J (5), 22-19**\n\nPB+J took an early lead, but in the end Strawberry Cheesecake was able to go on a solid run at the end and emerge victorious.\n\n**Guava Cream Cheese Hand Pies (6) over Peanut Butter (3), 24-17**\n\nAnother shocker! Though Peanut Butter has been trending upwards recently, this first round exit will be a big blow to PB fans all over. For Guava Cream Cheese Hand Pies, this marks a historic victory as GCCHP are now the first single serving pie to ever win a matchup in Pie Madness\n\n**Mississippi Mud (2) over Egg Nog Cream (7), 33-8**\n\nAnd to cap it all off, Mississippi Mud flexed its muscles over upstart Egg Nog Cream to come away with the biggest margin of victory this round. With only 8 votes it’ll take a lot of public fan support this offseason to see Egg Nog Cream make an appearance in 2022."
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "Round 1 Results!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1614625187148"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#cd9d42d6-990a-4b00-8f8b-84bdbb3986a1"
+            },
+            "text": {
+                "S": "The bracket contest is also still ongoing. So far, only THREE pie fans have submitted a bracket so if you've ever wanted to be on the pie selection committee this might be the year. I will stop taking submissions for the bracket contest after WEDNESDAY this week. Just fill a bracket out from the link below and send it to brackets@piemadness.com\n\n[Click here to download a bracket](https://www.dropbox.com/s/5rtayulguclf97w/PieMadness2021BracketForDownload.pdf?dl=0)\n\n[Click here to vote in round 1!](https://forms.gle/ATQ6QBp7UoCq5w4s7)"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "Round 1 voting is open!! "
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/c37b55b6-b23d-4b93-a9ef-b679b7939016.jpg"
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1644532345281"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#d4d14593-0c75-4da6-acb2-1b1cd8e2cfd0"
+            },
+            "text": {
+                "S": "Lemon Raspberry wins Pie Madness 2021!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "Final Bracket 2021"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1615144017861"
+            },
+            "user": {
+                "S": "USER#cbe4971d-44e0-4caa-ba4c-40716c2e9982"
+            },
+            "SK": {
+                "S": "POST#e75da527-e5c7-4464-beed-2aa52cf46e70"
+            },
+            "text": {
+                "S": "Voting is open now, just click below! Voting closes March 12\n\n[Click here to vote in round 2!](https://docs.google.com/forms/d/e/1FAIpQLSel6pJjrfTACvWCVIHxOr86sxQmha7m3tXv33iOJ1Q5wsA7Hw/viewform?usp=sf_link)"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "Round 2 voting is open!"
+            }
+        },
+        {
+            "hasPoll": {
+                "BOOL": false
+            },
+            "pollTitle": {
+                "NULL": true
+            },
+            "poll": {
+                "NULL": true
+            },
+            "image": {
+                "S": ""
+            },
+            "number": {
+                "N": "0"
+            },
+            "timestamp": {
+                "N": "1619487618459"
+            },
+            "user": {
+                "S": "USER#c6748090-00b5-4891-81aa-5e516a763369"
+            },
+            "SK": {
+                "S": "POST#f925daf5-ea85-4834-b13e-b5e87c2e52a6"
+            },
+            "text": {
+                "S": "This is way better than Facebook!"
+            },
+            "PK": {
+                "S": "POST#CONTEST#2021"
+            },
+            "title": {
+                "S": "Why aren’t people using this???"
+            }
+        },
+        {
+            "secret": {
+                "S": "bf6c4a61-cbd1-4216-9af2-9d6043197152"
+            },
+            "image": {
+                "S": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F190359.jpg"
+            },
+            "lastName": {
+                "S": "Meyers"
+            },
+            "timestamp": {
+                "N": "1614010617286"
+            },
+            "favoritePie": {
+                "S": "Peanut Butter"
+            },
+            "user": {
+                "S": "Jess Meyers"
+            },
+            "SK": {
+                "S": "USER#22045cd8-ffd1-4b3c-8f8a-58df8c92eee8"
+            },
+            "PK": {
+                "S": "USER#22045cd8-ffd1-4b3c-8f8a-58df8c92eee8"
+            },
+            "firstName": {
+                "S": "Jess"
+            }
+        },
+        {
+            "user": {
+                "S": "USER#ba13ae3f-d4f9-4985-be5e-2744f23c8ba4"
+            },
+            "SK": {
+                "S": "COMMENT#692b6150-9ffc-450b-8878-21618eec0ff7"
+            },
+            "text": {
+                "S": "We had a real chance to shake things up this year, folks!!! But you chose to keep this competition basic with Blueberry and Apple?!?! Shaaaame"
+            },
+            "PK": {
+                "S": "POST#bea5a94e-21c7-491f-8dff-b7e1373e070e"
+            },
+            "timestamp": {
+                "N": "1646665749050"
+            }
+        },
+        {
+            "secret": {
+                "S": "51befcdb-219e-46d6-9233-1285e011b4d6"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/a166018a-1750-4d4f-bb26-403a8b94468a.jpeg"
+            },
+            "lastName": {
+                "S": "Trautmann"
+            },
+            "timestamp": {
+                "N": "1646181200926"
+            },
+            "favoritePie": {
+                "S": "Cream"
+            },
+            "user": {
+                "S": "Nick Trautmann"
+            },
+            "SK": {
+                "S": "USER#3d930dea-236c-4d1d-b4dd-4166d6635c36"
+            },
+            "PK": {
+                "S": "USER#3d930dea-236c-4d1d-b4dd-4166d6635c36"
+            },
+            "firstName": {
+                "S": "Nick"
+            }
+        },
+        {
+            "secret": {
+                "S": "12b0ebc7-4872-44ae-8e95-be111a4f581a"
+            },
+            "image": {
+                "S": "https://pie-madness.s3.amazonaws.com/678658de-dae4-48a2-bc8e-47f815f9cb9b.jpeg"
+            },
+            "lastName": {
+                "S": "Hardcastle"
+            },
+            "timestamp": {
+                "N": "1645550178529"
+            },
+            "favoritePie": {
+                "S": "Blueberry"
+            },
+            "user": {
+                "S": "Ellen Hardcastle"
+            },
+            "SK": {
+                "S": "USER#dca13be1-36f7-4f54-8811-f009330b9b59"
+            },
+            "PK": {
+                "S": "USER#dca13be1-36f7-4f54-8811-f009330b9b59"
+            },
+            "firstName": {
+                "S": "Ellen"
+            }
+        }
+    ],
+    "Count": 68,
+    "ScannedCount": 68,
+    "ConsumedCapacity": null
+}

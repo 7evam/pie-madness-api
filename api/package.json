@@ -1,0 +1,24 @@
+{
+  "name": "hello_world",
+  "version": "1.0.0",
+  "description": "pie madness backend",
+  "main": "app.js",
+  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
+  "author": "SAM CLI",
+  "license": "MIT",
+  "dependencies": {
+    "@vendia/serverless-express": "^4.12.6",
+    "axios": ">=1.6.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "test": "mocha tests/unit/",
+    "create_db": "../scripts/create_db.sh",
+    "insert_data": "../scripts/insert_data.sh"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.2.0"
+  }
+}

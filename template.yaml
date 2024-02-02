@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  
+Globals:
+  Function:
+    Timeout: 600
+
+Parameters:
+  ddbEndpoint:
+    Type: String
+    Description: local ddb connection string
+    Default: http://docker.for.mac.localhost:8000
+
+Resources:
+  ExpressApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      BinaryMediaTypes: ['*/*']
+  ExpressFunction:
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: api/
+      Handler: lambda.handler
+      Runtime: nodejs14.x
+      Environment:
+        Variables:
+          ddbEndpoint: !Ref ddbEndpoint
+      MemorySize: 512
+      Events:
+        ExpressFunctionProxy:
+          Type: Api
+          Properties:
+            RestApiId: !Ref ExpressApi
+            Path: "/{proxy+}"
+            Method: ANY
+        ExpressFunctionRoot:
+          Type: Api
+          Properties:
+            RestApiId: !Ref ExpressApi
+            Path: "/"
+            Method: ANY
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: PieMadness
+
+Outputs:
+  ExpressFunctionApi:
+    Description: "API Gateway endpoint URL for Prod stage for Express function"
+    Value: !Sub "https://${ExpressApi}.execute-api.${AWS::Region}.amazonaws.com/prod/"
+  ExpressFunction:
+    Description: "Express Lambda Function ARN"
+    Value: !GetAtt ExpressFunction.Arn
+  ExpressFunctionIamRole:
+    Description: "Implicit IAM Role created for Express function"
+    Value: !GetAtt ExpressFunctionRole.Arn
