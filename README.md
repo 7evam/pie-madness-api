@@ -14,7 +14,7 @@ These can all be installed with Brew if you prefer
 
 1. Clone the code from the repo to your machine
 
-2. Download and install Docker desktop if you haven’t already. Run `docker-compose up` in the root of the project. This will install a local dockerized instance of dynamodb on your machine. Use docker desktop to confirm that your database is running. You can also confirm with the AWS cli by running `aws dynamodb list-tables --endpoint http://localhost:8000` in your terminal. The list of tables should be empty.
+2. Download and install Docker desktop if you haven’t already. Run `docker-compose up` in the root of the project. This will install a local dockerized instance of dynamodb on your machine. Use docker desktop to confirm that your database is running. You can also confirm with the AWS cli by running `aws dynamodb list-tables --endpoint http://localhost:8000` in your terminal. The list of tables should be empty. Note: you do not need valid aws credentials to use dynamodb locally, but you might need to try configure some anyway. If you run into this problem, run `aws configure` and fill in something for your access id, secret key and set your region to local.
 
 3. Run the create_db script by running `npm run create_db` in the root of the /api directory. Now if you run `aws dynamodb list-tables --endpoint http://localhost:8000` you should see the tables. Then, run the insert_data script by running `npm run insert_data` in the root of the /api directory. Check if this succeeds by running `aws dynamodb scan --table-name pie_madness_local --endpoint http://localhost:8000`
 
