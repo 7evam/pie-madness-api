@@ -2,6 +2,10 @@
 
 This repo contains the API code for piemadness.com, a website / forum where pie fans can chat amongst themselves about the annual Pie Madness contest where pie flavors compete in a bracket format. 
 
+## Contribution guidelines
+
+You can clone the project without forking it first. Find an issue and create a new branch referencing the issue name.
+
 ## Steps to get pie madness backend running locally
 
 The data for piemadness.com has been copied with crtical user info obfuscated. This gives you a chance to run the website locally just as it runs live on piemadness.com by running a local instance of dynamodb and using SAM local.
