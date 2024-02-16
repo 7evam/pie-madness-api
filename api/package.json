@@ -13,12 +13,13 @@
     "express": "^4.18.2"
   },
   "scripts": {
-    "test": "mocha tests/unit/",
+    "test": "cross-env TESTING_ENV=true AWS_SAM_LOCAL=true mocha tests/unit/",
     "create_db": "../scripts/create_db.sh",
     "insert_data": "../scripts/insert_data.sh"
   },
   "devDependencies": {
     "chai": "^4.3.6",
+    "cross-env": "^7.0.3",
     "mocha": "^10.2.0"
   }
 }
