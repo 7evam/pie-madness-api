@@ -7,8 +7,6 @@ const {
   handleError,
 } = require("../../utils/requestHelper");
 
-const crypto = require("crypto");
-
 router.post("/posts/:postId/comments", async (req, res) => {
   const { postId } = req.params;
   const { body } = req;
@@ -19,7 +17,7 @@ router.post("/posts/:postId/comments", async (req, res) => {
         required: true,
         notEmpty: true,
       },
-      text: {
+      comment: {
         required: true,
         notEmpty: true,
       },
@@ -43,8 +41,7 @@ router.post("/posts/:postId/comments", async (req, res) => {
   const isValid = await authenticateUser(body.userId, body.secret);
 
   if (isValid) {
-    const uuid = crypto.randomUUID();
-    const post = await createComment(postId, uuid, body);
+    const post = await createComment(postId, body);
     handleError(res, post);
     res.status(201).json(post);
   } else {
