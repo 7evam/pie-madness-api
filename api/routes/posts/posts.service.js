@@ -1,30 +1,47 @@
 
-const {dynamodb, TableName} = require('../../services/db')
+const { dynamodb, TableName } = require('../../services/db')
 // const {sortByTime} = require('./util/sortByTime')
 
 exports.getPostsByContestId = async (year) => {
     const params = {
-        TableName,        
+        TableName,
         KeyConditionExpression: 'PK = :ContestId',
         ExpressionAttributeValues: {
             ':ContestId': `POST#CONTEST#${year}`
         }
     }
-    
-    try {
-        const dbRes = await dynamodb.query(params).promise()
-        return dbRes.Items
-    } catch(err) {
-        console.error('failed to get posts by contest ID')
-        console.log(err)
-    }
+
+    const posts = await this.getFromDatabase(params)
+
     return posts
 };
 
-exports.createPost = async(contestId, params) => {
+exports.getFromDatabase = async (params) => {
+    try {
+        const dbRes = await dynamodb.query(params).promise()
+        return dbRes.Items
+    } catch (err) {
+        console.error('failed to get posts by contest ID')
+        console.log(err)
+    }
+}
+
+exports.putToDatabase = async (params) => {
+    try {
+        res = await dynamodb.put(newPost).promise()
+        return newPost
+    } catch (e) {
+        console.error('failed to create post')
+        return { error: 'failed to create post' }
+        // TODO
+        // write error sending function
+    }
+}
+
+exports.createPost = async (contestId, params) => {
     const newPost = {
         TableName,
-        Item:{
+        Item: {
             PK: `POST#CONTEST#${contestId}`,
             SK: params.postId,
             text: params.text,
@@ -39,14 +56,6 @@ exports.createPost = async(contestId, params) => {
             pollTitle: params.pollTitle
         }
     }
-    let res
-    try{
-        res = await dynamodb.put(newPost).promise()
-        return newPost
-    } catch(e){
-        console.error('failed to create post')
-        return {error: 'failed to create post'}
-        // TODO
-        // write error sending function
-    }
+    const res = await this.putToDatabase(newPost)
+    return res
 }

@@ -18,7 +18,9 @@
     "insert_data": "../scripts/insert_data.sh"
   },
   "devDependencies": {
+    "aws-sdk": "^2.1562.0",
     "chai": "^4.3.6",
+    "chai-http": "^4.4.0",
     "cross-env": "^7.0.3",
     "mocha": "^10.2.0"
   }
