@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const { validateRequiredPostFields, handleError } = require('../../utils/requestHelper')
-const { createUser } = require('./users.service')
+const { createUser, getUserInfo } = require('./users.service')
 
 router.post('/users', async (req, res, next) => {
     try {
@@ -26,6 +26,20 @@ router.post('/users', async (req, res, next) => {
         console.log('here is resposne')
         console.log(response)
         res.status(201).json(response)
+
+    } catch (e) {
+        next(e)
+    }
+})
+
+router.get('/users/:userId', async (req, res, next) => {
+    try {
+        const { userId } = req.params
+        console.log('in get user')
+        console.log(userId)
+        const user = await getUserInfo(userId)
+
+        res.status(200).json(user)
 
     } catch (e) {
         next(e)

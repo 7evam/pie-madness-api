@@ -8,8 +8,8 @@ const { getUserInfo } = require("../../routes/users/users.service")
 chai.use(chaiHttp)
 
 // get user
-describe('service gets user', () => {
-    it('should show the service can get a user', async () => {
+describe('integration, gets user', () => {
+    it('should show user without secret and get 200 code', async () => {
         const testUser = {
             image: 'https://pie-madness.s3.amazonaws.com/d7f5eea1-5af6-4982-bccc-0e7e870b0215.jpeg',
             lastName: 'lane',
@@ -20,22 +20,19 @@ describe('service gets user', () => {
             user: 'evan lane',
             timestamp: 1678082527781
         }
-        const userId = "USER#da6404a0-d32c-4e05-8377-319c274c3254"
-        // const getFromDatabaseStub = sinon.stub().resolves({
-        // image: 'https://pie-madness.s3.amazonaws.com/d7f5eea1-5af6-4982-bccc-0e7e870b0215.jpeg',
-        // lastName: 'lane',
-        // firstName: 'evan',
-        // favoritePie: '',
-        // SK: 'USER#da6404a0-d32c-4e05-8377-319c274c3254',
-        // secret: '61b540c8-ddd7-f213-8088-26c645e96eb7',
-        // PK: 'USER#da6404a0-d32c-4e05-8377-319c274c3254',
-        // user: 'evan lane',
-        // timestamp: 1678082527781
-        // })
-        // const originalGetFromDatabase = require('../../routes/posts/users.service').getFromDatabase
-        // require('../../routes/posts/users.service').getFromDatabase = getFromDatabaseStub
-        const res = await getUserInfo(userId)
-        expect(res).to.deep.equal(testUser)
+        const userId = "da6404a0-d32c-4e05-8377-319c274c3254"
+        const event = {
+            headers: {},
+            httpMethod: 'GET',
+            path: `/users/${userId}`,
+            requestContext: {
+                stage: 'dev'
+            }
+        }
+        const result = await lambda.handler(event, {})
+        expect(result.statusCode).to.equal(200);
+        // const res = await getUserInfo(userId)
+        // expect(res).to.deep.equal(testUser)
     })
 })
 

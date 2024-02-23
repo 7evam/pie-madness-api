@@ -8,21 +8,17 @@ const crypto = require("crypto");
 const { PutCommand, DynamoDBDocumentClient } = require('@aws-sdk/lib-dynamodb')
 
 exports.getUserInfo = async (userId, forSecret = false) => {
-    console.log('here is user id')
-    console.log(userId)
     const params = {
         TableName,
         KeyConditionExpression: 'PK = :UserId',
         ExpressionAttributeValues: {
-            ':UserId': { S: userId }
+            ':UserId': { S: `USER#${userId}` }
         }
     }
-    console.log('params for user')
-    console.log(params)
 
     let user = await this.getFromDatabase(params)
     if (user.length > 1) throw new error.ServerError('Multiple users with ID found')
-    if (user.length < 1) throw new error.BadRequest('User not found')
+    if (user.length < 1) throw new error.NotFound('User not found')
     user = user[0]
     if (forSecret === false && user.secret) {
         delete user.secret
@@ -31,6 +27,8 @@ exports.getUserInfo = async (userId, forSecret = false) => {
 }
 
 exports.getFromDatabase = async (params) => {
+    console.log('params to get from db')
+    console.log(params)
     try {
         const query = new QueryCommand(params)
         const result = await dynamodb.send(query)
@@ -45,7 +43,7 @@ exports.getFromDatabase = async (params) => {
 exports.authenticateUser = async (userId, secret) => {
     let user
     try {
-        user = await this.getUserInfo(`USER#${userId}`, true)
+        user = await this.getUserInfo(userId, true)
     } catch (err) {
         console.error('failed authenticating user')
         console.log(err)

@@ -15,15 +15,16 @@ router.get("/posts/contestId/:contestId", async (req, res, next) => {
         // create array of users needed to fetch
         const users = []
         for (const post of posts) {
-            if (!(users.includes(post.user))) {
-                users.push(post.user)
+            let user = post.user
+            if (user && user.includes('USER#')) user = user.split('#')[1]
+            if (!(users.includes(user))) {
+                users.push(user)
             }
         }
 
         // get data for each user
         const userTable = {}
         for (let user of users) {
-            if (user && !user.includes('USER#')) user = 'USER#' + user
             userTable[user] = await getUserInfo(user)
         }
 
