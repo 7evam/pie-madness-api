@@ -4,7 +4,7 @@ const error = require('../../services/error')
 const { QueryCommand } = require("@aws-sdk/client-dynamodb");
 const { unmarshall } = require('@aws-sdk/util-dynamodb');
 // const {sortByTime} = require('./util/sortByTime')
-const { PutCommand, DynamoDBDocumentClient } = require('@aws-sdk/lib-dynamodb')
+const { PutCommand, DynamoDBDocumentClient, DeleteCommand } = require('@aws-sdk/lib-dynamodb')
 const crypto = require("crypto");
 
 exports.getPostsByContestId = async (year) => {
@@ -33,8 +33,6 @@ exports.getPostsByContestId = async (year) => {
 // }
 
 exports.getFromDatabase = async (params) => {
-    console.log("getting from database hers params")
-    console.log(params)
     try {
         const query = new QueryCommand(params)
         const result = await dynamodb.send(query)
@@ -58,18 +56,29 @@ exports.putToDatabase = async (params) => {
     }
 }
 
+exports.deletePostById = async (year, postId) => {
+    const params = {
+        TableName,
+        Key: {
+            PK: `POST#CONTEST#${year}`,
+            SK: `POST#${postId}`
+        }
+    }
+    const response = await this.deleteFromDatabase(params)
+
+    return response
+}
+
 exports.getPostById = async (year, postId) => {
     const params = {
         TableName,
         KeyConditionExpression: 'PK = :ContestId AND SK = :PostId',
         ExpressionAttributeValues: {
             ':ContestId': { S: `POST#CONTEST#${year}` },
-            ':PostId': { S: postId }
+            ':PostId': { S: `POST#${postId}` }
         }
     }
     const post = await this.getFromDatabase(params)
-    console.log('here is post')
-    console.log(post)
     if (post.length === 0) throw new error.NotFound(`post with id ${postId} not found`)
     if (post.length > 1) throw new error.ServerError(`multiple posts with id ${postId} found`)
     return post[0]
@@ -80,7 +89,7 @@ exports.updatePost = async (contestId, params, postId) => {
         TableName,
         Item: {
             PK: `POST#CONTEST#${contestId}`,
-            SK: `${contestId}-${postId}`,
+            SK: `POST#${contestId}-${postId}`,
             text: params.text,
             title: params.title,
             image: params.image,
@@ -104,7 +113,7 @@ exports.createPost = async (contestId, params) => {
         TableName,
         Item: {
             PK: `POST#CONTEST#${contestId}`,
-            SK: postId,
+            SK: `POST#${postId}`,
             text: params.text,
             title: params.title,
             image: params.image,
@@ -119,4 +128,17 @@ exports.createPost = async (contestId, params) => {
     }
     await this.putToDatabase(newPost)
     return params
+}
+
+exports.deleteFromDatabase = async (params) => {
+    try {
+        const command = new DeleteCommand(params)
+        const docClient = DynamoDBDocumentClient.from(dynamodb)
+        const response = await docClient.send(command)
+        return response
+    } catch (e) {
+        console.error(e)
+        throw new error.ServerError('unable to delete post from database')
+    }
+
 }

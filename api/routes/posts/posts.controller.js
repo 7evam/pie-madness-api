@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { updatePost, getPostsByContestId, createPost, getPostById } = require('./posts.service')
+const { updatePost, getPostsByContestId, createPost, getPostById, deletePostById } = require('./posts.service')
 const { authenticateUser, getUserInfo } = require('../users/users.service')
 const { validateRequiredPostFields, handleError } = require('../../utils/requestHelper')
 const { getCommentsByPostId } = require('../comments/comments.service')
@@ -132,6 +132,40 @@ router.post('/posts/contestId/:contestId', async (req, res, next) => {
     } catch (e) {
         next(e)
     }
+})
+
+// delete post
+router.delete('/posts/:postId', async (req, res, next) => {
+    const { postId } = req.params;
+    const secret = req.headers.authorization
+    if (!secret.length) {
+        res.status(401).json({ error: "Unauthorized" })
+        return
+    }
+
+    // if post doesn't have year in id 
+    // the post is unable to be retreived
+    const year = postId.split('-')[0]
+    if (year.length !== 4) {
+        res.status(400).json({ error: "Unable to retrieve post without year" })
+        return
+    }
+
+    const post = await getPostById(year, postId)
+
+    const isValid = await authenticateUser(post.user, secret)
+
+    if (!isValid) {
+        res.status(401).json({ error: "Unauthorized" })
+        return
+    }
+
+    // TODO
+    // consider deleting all comments associated with post
+
+    await deletePostById(year, postId)
+
+    res.status(200).json("successfully deleted post")
 })
 
 // edit post

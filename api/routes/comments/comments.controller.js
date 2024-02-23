@@ -54,6 +54,10 @@ router.post("/posts/:postId/comments", async (req, res, next) => {
 router.delete("/posts/:postId/comments/:commentId", async (req, res, next) => {
   const { postId, commentId } = req.params;
   const secret = req.headers.authorization
+  if (!secret.length) {
+    res.status(401).json({ error: "Unauthorized" })
+    return
+  }
 
   const comment = await getCommentById(postId, commentId)
 
