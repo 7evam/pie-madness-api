@@ -40,13 +40,30 @@ exports.getFromDatabase = async (params) => {
     }
 }
 
+exports.updateUser = async (params) => {
+    const newPost = {
+        TableName,
+        Item: {
+            PK: `USER#${params.userId}`,
+            SK: `USER#${params.userId}`,
+            secret: params.secret,
+            favoritePie: params.favoritePie,
+            image: params.image,
+            user: params.name,
+        }
+    }
+    await this.putToDatabase(newPost)
+
+    return params
+}
+
 exports.authenticateUser = async (userId, secret) => {
     let user
     try {
         user = await this.getUserInfo(userId, true)
     } catch (err) {
-        console.error('failed authenticating user')
-        console.log(err)
+        console.error(err)
+        throw new error.NotFound(`User with id ${userId} not found`)
     }
     let isUserAuthenticated = false
     if (user.secret === secret) isUserAuthenticated = true
@@ -67,6 +84,7 @@ exports.createUser = async (params) => {
             secret: params.secret,
             image: params.image,
             user: params.name,
+            favoritePie: params.favoritePie
         }
     }
     await this.putToDatabase(newPost)

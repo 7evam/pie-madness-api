@@ -28,10 +28,11 @@ app.use((req, res, next) => {
 app.use('/', router)
 app.use('/', postsRoutes)
 app.use('/', commentsRoutes)
+app.use('/', usersRoutes)
 app.use(errorHandler)
 // app.use('/', notificationsRoutes)
 // app.use('/', pollsRoutes)
-app.use('/', usersRoutes)
+
 // app.use('/', commentsRoutes)
 
 module.exports = app;
