@@ -3,7 +3,7 @@ const error = require('../../services/error')
 const { QueryCommand } = require("@aws-sdk/client-dynamodb");
 const { unmarshall } = require('@aws-sdk/util-dynamodb');
 // const {sortByTime} = require('../../utils/functions')
-const { PutCommand, DynamoDBDocumentClient } = require('@aws-sdk/lib-dynamodb')
+const { PutCommand, DynamoDBDocumentClient, DeleteCommand } = require('@aws-sdk/lib-dynamodb')
 const crypto = require("crypto");
 
 exports.createComment = async (postId, params) => {
@@ -28,18 +28,56 @@ exports.createComment = async (postId, params) => {
   return params
 };
 
+exports.getCommentById = async (postId, commentId) => {
+  const params = {
+    TableName,
+    KeyConditionExpression: 'PK = :post AND SK = :comment',
+    ExpressionAttributeValues: {
+      ':post': { S: `POST#${postId}` },
+      ':comment': { S: `COMMENT#${commentId}` },
+    }
+  }
+  const comment = await this.getFromDatabase(params)
+
+  if (comment.length > 1) throw new error.ServerError("multiple comments with id found")
+  if (comment.length < 1) throw new error.NotFound(`comment with id ${commentId} not found`)
+
+  return comment[0]
+}
+
+exports.deleteCommentById = async (postId, commentId) => {
+  const params = {
+    TableName,
+    Key: {
+      PK: `POST#${postId}`,
+      SK: `COMMENT#${commentId}`
+    }
+  }
+  const response = await this.deleteFromDatabase(params)
+
+  return response
+}
+
 exports.getCommentsByPostId = async (postId) => {
   const params = {
     TableName,
     KeyConditionExpression: 'PK = :post',
     ExpressionAttributeValues: {
-      ':post': { S: `POST#${postId}` }
+      ':post': { S: `POST#${postId}` },
+
     }
   }
 
   const comments = await this.getFromDatabase(params)
 
   return comments
+}
+
+exports.deleteFromDatabase = async (params) => {
+  const command = new DeleteCommand(params)
+  const docClient = DynamoDBDocumentClient.from(dynamodb)
+  const response = await docClient.send(command)
+  return response
 }
 
 exports.getFromDatabase = async (params) => {
@@ -59,8 +97,8 @@ exports.getFromDatabase = async (params) => {
 exports.putToDatabase = async (params) => {
   try {
     const docClient = DynamoDBDocumentClient.from(dynamodb)
-    const query = new PutCommand(params)
-    const res = await docClient.send(query)
+    const command = new PutCommand(params)
+    const res = await docClient.send(command)
     return res
   } catch (e) {
     console.error(e)

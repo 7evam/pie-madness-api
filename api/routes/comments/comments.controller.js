@@ -1,17 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const { createComment } = require("./comments.service");
+const { createComment, getCommentById, deleteCommentById } = require("./comments.service");
 const { authenticateUser } = require("../users/users.service");
 const {
   validateRequiredPostFields,
   handleError,
 } = require("../../utils/requestHelper");
 
-router.post("/posts/:postId/comments", async (req, res) => {
+// create commment
+router.post("/posts/:postId/comments", async (req, res, next) => {
   const { postId } = req.params;
   const { body } = req;
-
-  console.log("in post for comments")
 
   const validationErrors = validateRequiredPostFields(
     {
@@ -50,5 +49,26 @@ router.post("/posts/:postId/comments", async (req, res) => {
     res.status(401).json({ error: "Unauthorized" });
   }
 });
+
+// delete comment
+router.delete("/posts/:postId/comments/:commentId", async (req, res, next) => {
+  const { postId, commentId } = req.params;
+  const secret = req.headers.authorization
+
+  const comment = await getCommentById(postId, commentId)
+
+  const userId = comment.user.split('#')[1]
+
+  const isValid = await authenticateUser(userId, secret)
+
+  if (!isValid) {
+    res.status(401).json({ error: "Unauthorized" })
+    return
+  }
+
+  await deleteCommentById(postId, commentId)
+
+  res.status(200).json("successfully deleted comment")
+})
 
 module.exports = router;
