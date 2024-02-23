@@ -5,6 +5,7 @@ const { QueryCommand } = require("@aws-sdk/client-dynamodb");
 const { unmarshall } = require('@aws-sdk/util-dynamodb');
 // const {sortByTime} = require('./util/sortByTime')
 const { PutCommand, DynamoDBDocumentClient } = require('@aws-sdk/lib-dynamodb')
+const crypto = require("crypto");
 
 exports.getPostsByContestId = async (year) => {
     const params = {
@@ -74,12 +75,12 @@ exports.getPostById = async (year, postId) => {
     return post[0]
 }
 
-exports.createPost = async (contestId, params) => {
-    const newPost = {
+exports.updatePost = async (contestId, params, postId) => {
+    const updatedPost = {
         TableName,
         Item: {
             PK: `POST#CONTEST#${contestId}`,
-            SK: `${contestId}-${params.postId}`,
+            SK: `${contestId}-${postId}`,
             text: params.text,
             title: params.title,
             image: params.image,
@@ -92,6 +93,30 @@ exports.createPost = async (contestId, params) => {
             pollTitle: params.pollTitle
         }
     }
-    const res = await this.putToDatabase(newPost)
-    return res
+    await this.putToDatabase(updatedPost)
+    return { postId, ...params }
+}
+
+exports.createPost = async (contestId, params) => {
+    const postId = `${contestId}-${crypto.randomUUID()}`
+    params.postId = postId
+    const newPost = {
+        TableName,
+        Item: {
+            PK: `POST#CONTEST#${contestId}`,
+            SK: postId,
+            text: params.text,
+            title: params.title,
+            image: params.image,
+            timestamp: params.time,
+            user: params.userId,
+            hasPoll: params.hasPoll,
+            poll: params.pollId,
+            // number is number of comments, init at 0
+            number: 0,
+            pollTitle: params.pollTitle
+        }
+    }
+    await this.putToDatabase(newPost)
+    return params
 }
