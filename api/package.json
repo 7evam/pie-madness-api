@@ -7,6 +7,9 @@
   "author": "SAM CLI",
   "license": "MIT",
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.518.0",
+    "@aws-sdk/lib-dynamodb": "^3.518.0",
+    "@aws-sdk/util-dynamodb": "^3.518.0",
     "@vendia/serverless-express": "^4.12.6",
     "axios": ">=1.6.0",
     "body-parser": "^1.20.2",
@@ -22,6 +25,7 @@
     "chai": "^4.3.6",
     "chai-http": "^4.4.0",
     "cross-env": "^7.0.3",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "sinon": "^17.0.1"
   }
 }

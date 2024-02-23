@@ -15,12 +15,12 @@ aws dynamodb batch-write-item \
   --endpoint \
     http://localhost:8000 \
 
-aws dynamodb batch-write-item \
-  --request-items file://../data/data-4.json \
-  --endpoint \
-    http://localhost:8000 \
+# aws dynamodb batch-write-item \
+#   --request-items file://../data/data-4.json \
+#   --endpoint \
+#     http://localhost:8000 \
 
-aws dynamodb batch-write-item \
-  --request-items file://../data/data-5.json \
-  --endpoint \
-    http://localhost:8000 \
+# aws dynamodb batch-write-item \
+#   --request-items file://../data/data-5.json \
+#   --endpoint \
+#     http://localhost:8000 \

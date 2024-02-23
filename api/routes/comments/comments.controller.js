@@ -11,6 +11,8 @@ router.post("/posts/:postId/comments", async (req, res) => {
   const { postId } = req.params;
   const { body } = req;
 
+  console.log("in post for comments")
+
   const validationErrors = validateRequiredPostFields(
     {
       postId: {

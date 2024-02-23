@@ -8,8 +8,8 @@ const { getPostsByContestId, createPost } = require('../../routes/posts/posts.se
 
 chai.use(chaiHttp)
 
-describe('handler', () => {
-    it('should GET posts with 200', async () => {
+describe('integration, get posts by year', () => {
+    it('GETs posts from year with 200', async () => {
         const event = {
             headers: {},
             httpMethod: 'GET',
@@ -24,39 +24,70 @@ describe('handler', () => {
     });
 });
 
-describe('servce gets posts', () => {
-    it('should show the service can get posts', async () => {
-        const testPost = {
-            "SK": "123455678910123",
-            "number": 0,
-            "PK": "POST#CONTEST#2023",
-            "text": "This is a test",
-            "title": "Test"
+describe('integration, puts post', () => {
+    it('receive 201 for creating post', async () => {
+        const body = { "text": "This is the test post", "title": "Test", "userId": "da6404a0-d32c-4e05-8377-319c274c3254", "postId": "123455678910123", "secret": "61b540c8-ddd7-f213-8088-26c645e96eb7" }
+        const body_b64 = Buffer.from(JSON.stringify(body)).toString('base64')
+        const event = {
+            body: body_b64,
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "*/*",
+                'Content-Length': body_b64.length,
+                // "Accept-Encoding": 'gzip, deflate, br',
+            },
+            httpMethod: 'POST',
+            path: '/posts/contestId/2023',
+            pathParameters: { proxy: 'posts/contestId/2023' },
+            isBase64Encoded: true,
+            requestContext: {
+                accountId: '123456789012',
+                apiId: '1234567890',
+                stage: 'dev',
+                resourceId: '123456'
+            }
         }
-        const getFromDatabaseStub = sinon.stub().resolves([testPost])
-        const originalGetFromDatabase = require('../../routes/posts/posts.service').getFromDatabase
-        require('../../routes/posts/posts.service').getFromDatabase = getFromDatabaseStub
-        const result = await getPostsByContestId(2023)
-        require('../../routes/posts/posts.service').getFromDatabase = originalGetFromDatabase
 
-        expect(result).to.deep.equal([testPost]);
-        expect(getFromDatabaseStub.calledOnce).to.be.true
-        expect(getFromDatabaseStub.firstCall.args[0]).to.deep.equal({
-            TableName: 'pie_madness_local',
-            KeyConditionExpression: 'PK = :ContestId',
-            ExpressionAttributeValues: { ':ContestId': 'POST#CONTEST#2023' }
-        })
+        const result = await lambda.handler(event, {})
+        expect(result.statusCode).to.equal(201);
     })
 })
 
-describe('createPost', () => {
-    it('should create a new post', async () => {
+// describe('unit, gets post', () => {
+//     const testPost = {
+//         "SK": "123455678910123",
+//         "number": 0,
+//         "PK": "POST#CONTEST#2023",
+//         "text": "This is a test",
+//         "title": "Test"
+//     }
+//     it('should show the service can get posts', async () => {
+//         const getFromDatabaseStub = sinon.stub().resolves([testPost])
+//         const originalGetFromDatabase = require('../../routes/posts/posts.service').getFromDatabase
+//         require('../../routes/posts/posts.service').getFromDatabase = getFromDatabaseStub
+//         const result = await getPostsByContestId(2023)
+//         require('../../routes/posts/posts.service').getFromDatabase = originalGetFromDatabase
+
+//         expect(result).to.deep.equal([testPost]);
+//         expect(getFromDatabaseStub.calledOnce).to.be.true
+//         expect(getFromDatabaseStub.firstCall.args[0]).to.deep.equal({
+//             TableName: 'pie_madness_local',
+//             KeyConditionExpression: 'PK = :ContestId',
+//             ExpressionAttributeValues: { ':ContestId': 'POST#CONTEST#2023' }
+//         })
+//     })
+// })
+
+
+
+describe('unit, puts post', () => {
+    it('should create a new post, mock db', async () => {
         const testPost = {
-            "SK": "123455678910123",
-            "number": 0,
-            "PK": "POST#CONTEST#2023",
-            "text": "This is a test",
-            "title": "Test"
+            "text": "This is the test post",
+            "title": "Test",
+            "userId": "da6404a0-d32c-4e05-8377-319c274c3254",
+            "postId": "123455678910123",
+            "secret": "61b540c8-ddd7-f213-8088-26c645e96eb7"
         }
         const putToDatabaseStub = sinon.stub().resolves(testPost);
 

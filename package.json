@@ -1,5 +1,5 @@
 {
-  "devDependencies": {
-    "sinon": "^17.0.1"
+  "dependencies": {
+    "@aws-sdk/lib-dynamodb": "^3.518.0"
   }
 }
