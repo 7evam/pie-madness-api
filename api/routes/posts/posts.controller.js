@@ -82,7 +82,6 @@ router.get("/posts/:postId", async (req, res, next) => {
         post.comments = comments
         res.status(200).json(post)
     } catch (err) {
-        console.log("in catch in get post")
         next(err)
     }
 })
@@ -109,8 +108,18 @@ router.post('/posts/contestId/:contestId', async (req, res, next) => {
             'secret': {
                 required: true,
                 notEmpty: true
+            },
+            'pollTitle': {
+                required: false
+            },
+            // TODO validate that pollOptions is an array
+            'pollOptions': {
+                required: body.pollTitle ? true : false,
+                notEmpty: body.pollTitle ? true : false
             }
         }, body)
+
+        body.pollVotes = Array.from({ length: body.pollOptions.length }, () => []);
 
         if (validationErrors.error) {
             res.status(400).json(validationErrors)
@@ -169,7 +178,7 @@ router.delete('/posts/:postId', async (req, res, next) => {
 })
 
 // edit post
-router.put('/posts/:postId', async (req, res, next) => {
+router.patch('/posts/:postId', async (req, res, next) => {
     try {
         const { body } = req
         const { postId } = req.params
@@ -198,6 +207,16 @@ router.put('/posts/:postId', async (req, res, next) => {
             'secret': {
                 required: true,
                 notEmpty: true
+            },
+            'pollTitle': {
+                required: false
+            },
+            'pollOptions': {
+                required: body.pollTitle ? true : false,
+                notEmpty: body.pollTitle ? true : false
+            },
+            'pollVotes': {
+                required: false
             }
         }, body)
 
@@ -213,11 +232,69 @@ router.put('/posts/:postId', async (req, res, next) => {
 
         if (isValid) {
             const post = await updatePost(year, body, postId)
-            handleError(res, post)
+            // handleError(res, post)
             res.status(201).json(post)
         } else {
             res.status(401).json({ error: 'Unauthorized' })
         }
+    } catch (e) {
+        next(e)
+    }
+})
+
+// add vote to poll
+router.patch('/posts/:postId/vote', async (req, res, next) => {
+    try {
+        const { body } = req
+        const { postId } = req.params
+
+        // if post doesn't have year in id 
+        // the post is unable to be retreived
+        const year = postId.split('-')[0]
+        if (year.length !== 4) {
+            res.status(400).json({ error: "Unable to retrieve post without year" })
+            return
+        }
+
+        const validationErrors = validateRequiredPostFields({
+            'postId': {
+                required: true,
+                notEmpty: true
+            },
+            'userId': {
+                // user id of voter
+                required: true,
+                notEmpty: true
+            },
+            'secret': {
+                required: true,
+                notEmpty: true
+            },
+            'pollOption': {
+                // 0 indexed option of poll option to vote for
+                required: true,
+                notEmpty: true
+            }
+        }, body)
+
+        if (validationErrors.error) {
+            res.status(400).json(validationErrors)
+            return
+        }
+
+        const isValid = await authenticateUser(body.userId, body.secret)
+        delete body.secret
+
+        if (!isValid) res.status(401).json({ error: 'Unauthorized' })
+
+        // fetch post
+        const post = await getPostById(year, postId)
+
+        // check that user hasn't voted in this poll before
+
+        const res = await updatePost(year, body, postId)
+        handleError(res, post)
+        res.status(201).json(post)
     } catch (e) {
         next(e)
     }
@@ -257,7 +334,6 @@ router.get("/posts/:postId/year/:year", async (req, res, next) => {
         post.comments = comments
         res.status(200).json(post)
     } catch (err) {
-        console.log("in catch in get post")
         next(err)
     }
 })

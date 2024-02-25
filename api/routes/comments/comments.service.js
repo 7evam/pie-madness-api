@@ -81,8 +81,6 @@ exports.deleteFromDatabase = async (params) => {
 }
 
 exports.getFromDatabase = async (params) => {
-  console.log('params')
-  console.log(params)
   try {
     const query = new QueryCommand(params)
     const result = await dynamodb.send(query)

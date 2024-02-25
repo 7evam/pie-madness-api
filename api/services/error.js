@@ -43,13 +43,10 @@ class ServerError extends Error {
  */
 
 const errorHandler = (err, req, res, next) => {
-    console.log('in error handler')
     const customErrors = Object.values(require('./error'))
         .filter(errorClass => errorClass.prototype instanceof Error && errorClass !== Error)
 
     const isCustomError = !!customErrors.find(errorClass => err instanceof errorClass)
-    console.log('is a custom error')
-    console.log(isCustomError)
     if (isCustomError) {
 
         res.status(err.statusCode).json({ error: err.message });

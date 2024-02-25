@@ -4,7 +4,7 @@ const error = require('../../services/error')
 const { QueryCommand } = require("@aws-sdk/client-dynamodb");
 const { unmarshall } = require('@aws-sdk/util-dynamodb');
 // const {sortByTime} = require('./util/sortByTime')
-const { PutCommand, DynamoDBDocumentClient, DeleteCommand } = require('@aws-sdk/lib-dynamodb')
+const { DynamoDBDocumentClient, DeleteCommand, UpdateCommand, PutCommand } = require('@aws-sdk/lib-dynamodb')
 const crypto = require("crypto");
 
 exports.getPostsByContestId = async (year) => {
@@ -20,41 +20,6 @@ exports.getPostsByContestId = async (year) => {
 
     return posts
 };
-
-// exports.getFromDatabase = async (params) => {
-//     try {
-//         const docClient = DynamoDBDocumentClient.from(dynamodb)
-//         const res = await docClient.get(params)
-//         return res
-//     } catch (e) {
-//         console.error(e)
-//         throw new error.ServerError('failed to get from database')
-//     }
-// }
-
-exports.getFromDatabase = async (params) => {
-    try {
-        const query = new QueryCommand(params)
-        const result = await dynamodb.send(query)
-        return result.Items?.map(item => unmarshall(item))
-    } catch (err) {
-        console.error('failed to get data from database')
-        console.error(err)
-        throw new error.ServerError('unable to fetch from database')
-    }
-}
-
-exports.putToDatabase = async (params) => {
-    try {
-        const docClient = DynamoDBDocumentClient.from(dynamodb)
-        const query = new PutCommand(params)
-        const res = await docClient.send(query)
-        return res
-    } catch (e) {
-        console.error(e)
-        throw new error.ServerError('failed to put to database')
-    }
-}
 
 exports.deletePostById = async (year, postId) => {
     const params = {
@@ -84,27 +49,67 @@ exports.getPostById = async (year, postId) => {
     return post[0]
 }
 
+const generateUpdateParams = (updateValues) => {
+    let UpdateExpression = "SET ";
+    const ExpressionAttributeNames = {};
+    const ExpressionAttributeValues = {};
+
+    Object.keys(updateValues).forEach((key, index) => {
+        const attributeName = `#attr${index}`;
+        const attributeValueKey = `:val${index}`;
+        UpdateExpression += `${attributeName} = ${attributeValueKey}, `;
+        ExpressionAttributeNames[attributeName] = key;
+        ExpressionAttributeValues[attributeValueKey] = updateValues[key];
+    });
+
+    // Remove trailing comma and space
+    UpdateExpression = UpdateExpression.slice(0, -2);
+
+    return {
+        UpdateExpression,
+        ExpressionAttributeNames,
+        ExpressionAttributeValues,
+    };
+}
+
 exports.updatePost = async (contestId, params, postId) => {
+    const {
+        UpdateExpression,
+        ExpressionAttributeNames,
+        ExpressionAttributeValues
+    } = generateUpdateParams(params)
+
     const updatedPost = {
         TableName,
-        Item: {
+        Key: {
             PK: `POST#CONTEST#${contestId}`,
-            SK: `POST#${contestId}-${postId}`,
-            text: params.text,
-            title: params.title,
-            image: params.image,
-            timestamp: params.time,
-            user: params.userId,
-            hasPoll: params.hasPoll,
-            poll: params.pollId,
-            // number is number of comments, init at 0
-            number: 0,
-            pollTitle: params.pollTitle
-        }
+            SK: `POST#${postId}`
+        },
+        UpdateExpression,
+        ExpressionAttributeValues,
+        ExpressionAttributeNames,
+        "ReturnValues": "ALL_NEW",
     }
-    await this.putToDatabase(updatedPost)
+    await this.updateDatabase(updatedPost)
     return { postId, ...params }
 }
+
+// exports.updatePost = async (contestId, params, postId) => {
+//     const updatedPost = {
+//         TableName,
+//         Item: {
+//             text: params.text,
+//             title: params.title,
+//             image: params.image,
+//             // number is number of comments, init at 0
+//             number: 0,
+//             pollTitle: params.pollTitle,
+//             pollOptions: params.pollOptions
+//         }
+//     }
+//     await this.putToDatabase(updatedPost)
+//     return { postId, ...params }
+// }
 
 exports.createPost = async (contestId, params) => {
     const postId = `${contestId}-${crypto.randomUUID()}`
@@ -119,16 +124,18 @@ exports.createPost = async (contestId, params) => {
             image: params.image,
             timestamp: params.time,
             user: params.userId,
-            hasPoll: params.hasPoll,
-            poll: params.pollId,
             // number is number of comments, init at 0
             number: 0,
-            pollTitle: params.pollTitle
+            pollTitle: params.pollTitle,
+            pollOptions: params.pollOptions,
+            pollVotes: params.pollVotes
         }
     }
     await this.putToDatabase(newPost)
     return params
 }
+
+// Database functions
 
 exports.deleteFromDatabase = async (params) => {
     try {
@@ -141,4 +148,41 @@ exports.deleteFromDatabase = async (params) => {
         throw new error.ServerError('unable to delete post from database')
     }
 
+}
+
+
+exports.putToDatabase = async (params) => {
+    try {
+        const docClient = DynamoDBDocumentClient.from(dynamodb)
+        const query = new PutCommand(params)
+        const res = await docClient.send(query)
+        return res
+    } catch (e) {
+        console.error(e)
+        throw new error.ServerError('failed to put to database')
+    }
+}
+
+exports.getFromDatabase = async (params) => {
+    try {
+        const query = new QueryCommand(params)
+        const result = await dynamodb.send(query)
+        return result.Items?.map(item => unmarshall(item))
+    } catch (err) {
+        console.error('failed to get data from database')
+        console.error(err)
+        throw new error.ServerError('unable to fetch from database')
+    }
+}
+
+exports.updateDatabase = async (params) => {
+    try {
+        const docClient = DynamoDBDocumentClient.from(dynamodb)
+        const query = new UpdateCommand(params)
+        const res = await docClient.send(query)
+        return res
+    } catch (e) {
+        console.error(e)
+        throw new error.ServerError('failed to put to database')
+    }
 }

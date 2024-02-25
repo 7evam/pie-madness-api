@@ -3,6 +3,9 @@
 ## Posts
     -**PK**: POST#CONTEST#{contestId}
     -**SK**: POST#{postId}
+    -**pollTitle**: string
+    -**pollOptions**: list
+    -**pollVotes**: list
 
     *every postId starts with the year IE 2023-{postId}
 
@@ -13,3 +16,22 @@
 ## Users
     -**PK**: USER#{userId}
 
+
+
+
+to delete poll:
+patch request on post
+{
+    pollTitle: null
+    pollOptions: null
+    pollVotes: null
+}
+
+to add vote:
+patch request on post
+{
+    pollVotes
+}
+
+to add poll:
+patch request on post

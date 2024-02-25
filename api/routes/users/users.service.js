@@ -27,8 +27,6 @@ exports.getUserInfo = async (userId, forSecret = false) => {
 }
 
 exports.getFromDatabase = async (params) => {
-    console.log('params to get from db')
-    console.log(params)
     try {
         const query = new QueryCommand(params)
         const result = await dynamodb.send(query)

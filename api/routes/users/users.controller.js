@@ -23,8 +23,6 @@ router.post('/users', async (req, res, next) => {
         }
 
         const response = await createUser(body)
-        console.log('here is resposne')
-        console.log(response)
         res.status(201).json(response)
 
     } catch (e) {
@@ -71,9 +69,6 @@ router.put('/users/:userId', async (req, res, next) => {
 
         const isValid = await authenticateUser(userId, body.secret)
 
-        console.log('here is body')
-        console.log(body)
-
         if (isValid) {
             const user = await updateUser(body)
             res.status(200).json(user)
@@ -86,7 +81,6 @@ router.put('/users/:userId', async (req, res, next) => {
         res.status(200).json(user)
 
     } catch (e) {
-        console.log('in user catch')
         next(e)
     }
 })
