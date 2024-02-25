@@ -17,6 +17,19 @@ exports.validateRequiredPostFields = (requirements, fields) => {
                         }
                     }
                     break;
+                case 'type':
+                    if (requirements[fieldName].type === 'array') {
+                        if (!Array.isArray(fields[fieldName]) || fields[fieldName].length < 2) {
+                            return {
+                                error: `${fieldName} must be array with length of at least 2`
+                            }
+                        }
+                    } else {
+                        return {
+                            error: "Server Error: unknown type required"
+                        }
+                    }
+                    break;
                 case 'maxLength':
                     if (fields[fieldName].length > requirements.requirement.fieldName) {
                         return {

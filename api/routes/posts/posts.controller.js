@@ -115,7 +115,8 @@ router.post('/posts/contestId/:contestId', async (req, res, next) => {
             // TODO validate that pollOptions is an array
             'pollOptions': {
                 required: body.pollTitle ? true : false,
-                notEmpty: body.pollTitle ? true : false
+                notEmpty: body.pollTitle ? true : false,
+                type: 'array'
             }
         }, body)
 

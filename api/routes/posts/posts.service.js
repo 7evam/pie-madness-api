@@ -88,7 +88,7 @@ exports.updatePost = async (contestId, params, postId) => {
         UpdateExpression,
         ExpressionAttributeValues,
         ExpressionAttributeNames,
-        "ReturnValues": "ALL_NEW",
+        ReturnValues: "ALL_NEW",
     }
     await this.updateDatabase(updatedPost)
     return { postId, ...params }
