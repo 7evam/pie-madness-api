@@ -243,8 +243,8 @@ router.patch('/posts/:postId', async (req, res, next) => {
     }
 })
 
-// add vote to poll
-router.patch('/posts/:postId/vote', async (req, res, next) => {
+// add vote to poll option
+router.patch('/posts/:postId/addVote', async (req, res, next) => {
     try {
         const { body } = req
         const { postId } = req.params
@@ -258,10 +258,6 @@ router.patch('/posts/:postId/vote', async (req, res, next) => {
         }
 
         const validationErrors = validateRequiredPostFields({
-            'postId': {
-                required: true,
-                notEmpty: true
-            },
             'userId': {
                 // user id of voter
                 required: true,
@@ -274,7 +270,8 @@ router.patch('/posts/:postId/vote', async (req, res, next) => {
             'pollOption': {
                 // 0 indexed option of poll option to vote for
                 required: true,
-                notEmpty: true
+                notEmpty: true,
+                type: "number"
             }
         }, body)
 
@@ -292,8 +289,97 @@ router.patch('/posts/:postId/vote', async (req, res, next) => {
         const post = await getPostById(year, postId)
 
         // check that user hasn't voted in this poll before
+        const hasUserVoted = post.pollVotes.some(subArray => subArray.includes(body.userId));
+        if (hasUserVoted) {
+            res.status(400).json("User has already voted")
+            return
+        }
 
-        const res = await updatePost(year, body, postId)
+        const newPollVotes = post.pollVotes
+        if (!newPollVotes[body.pollOption]) res.status(404).json({ error: "Poll option not found" })
+        newPollVotes[body.pollOption].push(body.userId)
+        const params = {
+            pollVotes: newPollVotes
+        }
+
+        const response = await updatePost(year, params, postId)
+        handleError(res, post)
+        res.status(201).json(post)
+    } catch (e) {
+        next(e)
+    }
+})
+
+// remove vote to poll option
+// TODO consider combining this with add vote since most code is the same
+// use addVote/removeVote as param
+router.patch('/posts/:postId/removeVote', async (req, res, next) => {
+    try {
+        const { body } = req
+        const { postId } = req.params
+
+        // if post doesn't have year in id 
+        // the post is unable to be retreived
+        const year = postId.split('-')[0]
+        if (year.length !== 4) {
+            res.status(400).json({ error: "Unable to retrieve post without year" })
+            return
+        }
+
+        const validationErrors = validateRequiredPostFields({
+            'userId': {
+                // user id of voter
+                required: true,
+                notEmpty: true
+            },
+            'secret': {
+                required: true,
+                notEmpty: true
+            },
+            'pollOption': {
+                // 0 indexed option of poll option to remove vote for
+                required: true,
+                notEmpty: true,
+                type: "number"
+            }
+        }, body)
+
+        if (validationErrors.error) {
+            res.status(400).json(validationErrors)
+            return
+        }
+
+        const isValid = await authenticateUser(body.userId, body.secret)
+        delete body.secret
+
+        if (!isValid) res.status(401).json({ error: 'Unauthorized' })
+
+        // fetch post
+        const post = await getPostById(year, postId)
+
+        // check that user has indeed voted in this poll before
+        const hasUserVoted = post.pollVotes.some(subArray => subArray.includes(body.userId));
+        if (!hasUserVoted) {
+            res.status(400).json("Can't remove vote, user hasn't voted in this poll")
+            return
+        }
+
+        let newPollVotes = post.pollVotes
+        if (!newPollVotes[body.pollOption]) res.status(404).json({ error: "Poll option not found" })
+
+        const voteIndex = newPollVotes[body.pollOption].indexOf(body.userId)
+
+        if (voteIndex < 0) {
+            res.status(400).json({ error: "vote from user not found" })
+            return
+        }
+
+        newPollVotes[body.pollOption].splice(voteIndex, 1)
+        const params = {
+            pollVotes: newPollVotes
+        }
+
+        const response = await updatePost(year, params, postId)
         handleError(res, post)
         res.status(201).json(post)
     } catch (e) {

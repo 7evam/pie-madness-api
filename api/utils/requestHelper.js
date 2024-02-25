@@ -24,6 +24,12 @@ exports.validateRequiredPostFields = (requirements, fields) => {
                                 error: `${fieldName} must be array with length of at least 2`
                             }
                         }
+                    } else if (requirements[fieldName].type === 'number') {
+                        if (typeof fields[fieldName] !== "number") {
+                            return {
+                                error: `${fieldName} must be a number`
+                            }
+                        }
                     } else {
                         return {
                             error: "Server Error: unknown type required"
