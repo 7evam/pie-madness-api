@@ -3,6 +3,7 @@ const router = express.Router()
 const { validateRequiredPostFields, handleError } = require('../../utils/requestHelper')
 const { createUser, getUserInfo, updateUser, authenticateUser } = require('./users.service')
 
+// create user
 router.post('/users', async (req, res, next) => {
     try {
         const { body } = req
@@ -30,6 +31,7 @@ router.post('/users', async (req, res, next) => {
     }
 })
 
+// get user
 router.get('/users/:userId', async (req, res, next) => {
     try {
         const { userId } = req.params
@@ -43,6 +45,7 @@ router.get('/users/:userId', async (req, res, next) => {
     }
 })
 
+// edit user
 router.put('/users/:userId', async (req, res, next) => {
     try {
         const { userId } = req.params

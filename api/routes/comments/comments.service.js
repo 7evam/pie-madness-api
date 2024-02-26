@@ -11,7 +11,7 @@ exports.createComment = async (postId, params) => {
   params.commentId = commentId
 
   const Item = {
-    PK: `POST#${postId}`,
+    PK: `COMMENT#POST#${postId}`,
     SK: `COMMENT#${commentId}`,
     text: params.comment,
     timestamp: params.time,
@@ -33,7 +33,7 @@ exports.getCommentById = async (postId, commentId) => {
     TableName,
     KeyConditionExpression: 'PK = :post AND SK = :comment',
     ExpressionAttributeValues: {
-      ':post': { S: `POST#${postId}` },
+      ':post': { S: `COMMENT#POST#${postId}` },
       ':comment': { S: `COMMENT#${commentId}` },
     }
   }
@@ -63,8 +63,7 @@ exports.getCommentsByPostId = async (postId) => {
     TableName,
     KeyConditionExpression: 'PK = :post',
     ExpressionAttributeValues: {
-      ':post': { S: `POST#${postId}` },
-
+      ':post': { S: `COMMENT#POST#${postId}` },
     }
   }
 

@@ -5,9 +5,10 @@ const router = express.Router()
 const postsRoutes = require('./routes/posts/posts.controller')
 const commentsRoutes = require('./routes/comments/comments.controller')
 const usersRoutes = require('./routes/users/users.controller')
+const notificationsRoutes = require('./routes/notifications/notifications.controller')
+
 const { errorHandler } = require('./services/error')
 
-// const notificationsRoutes = require('./routes/notifications/notifications.controller')
 // const pollsRoutes = require('./routes/polls/polls.controller')
 // const commentsRoutes = require('./routes/comments/comments.controller')
 // const routes = require('./routes/routes')
@@ -29,8 +30,9 @@ app.use('/', router)
 app.use('/', postsRoutes)
 app.use('/', commentsRoutes)
 app.use('/', usersRoutes)
+app.use('/', notificationsRoutes)
 app.use(errorHandler)
-// app.use('/', notificationsRoutes)
+
 // app.use('/', pollsRoutes)
 
 // app.use('/', commentsRoutes)

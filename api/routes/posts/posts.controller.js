@@ -57,14 +57,17 @@ router.get("/posts/:postId", async (req, res, next) => {
         const post = await getPostById(year, postId)
 
         // get comments
+
         const comments = await getCommentsByPostId(postId)
+
 
         // create array of users needed to fetch
         // start with user from post
+
         const users = [post.user]
         for (const comment of comments) {
             if (!(users.includes(comment.user))) {
-                users.push(comment.user)
+                users.push(comment.user.split('#')[1])
             }
         }
 
@@ -75,9 +78,9 @@ router.get("/posts/:postId", async (req, res, next) => {
         }
 
         // append user info on post and each comment
-        post.user = userTable[`USER#${post.user}`]
+        post.user = userTable[post.user]
         comments.forEach(comment => {
-            comment.user = userTable[comment.user]
+            comment.user = userTable[comment.user.split('#')[1]]
         })
         post.comments = comments
         res.status(200).json(post)
@@ -116,11 +119,11 @@ router.post('/posts/contestId/:contestId', async (req, res, next) => {
             'pollOptions': {
                 required: body.pollTitle ? true : false,
                 notEmpty: body.pollTitle ? true : false,
-                type: 'array'
+                type: body.pollTitle ? 'array' : null
             }
         }, body)
 
-        body.pollVotes = Array.from({ length: body.pollOptions.length }, () => []);
+        if (body.pollOptions) body.pollVotes = Array.from({ length: body.pollOptions.length }, () => []);
 
         if (validationErrors.error) {
             res.status(400).json(validationErrors)
@@ -294,13 +297,14 @@ router.patch('/posts/:postId/addVote', async (req, res, next) => {
             res.status(400).json("User has already voted")
             return
         }
-
         const newPollVotes = post.pollVotes
         if (!newPollVotes[body.pollOption]) res.status(404).json({ error: "Poll option not found" })
         newPollVotes[body.pollOption].push(body.userId)
         const params = {
             pollVotes: newPollVotes
         }
+
+
 
         const response = await updatePost(year, params, postId)
         handleError(res, post)

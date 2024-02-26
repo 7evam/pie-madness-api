@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const { createComment, getCommentById, deleteCommentById } = require("./comments.service");
+const { createComment, getCommentById, deleteCommentById, getCommentsByPostId } = require("./comments.service");
 const { authenticateUser } = require("../users/users.service");
 const {
   validateRequiredPostFields,
   handleError,
 } = require("../../utils/requestHelper");
+const { getPostById } = require("../posts/posts.service");
+const { createNotification } = require("../notifications/notifications.service");
 
 // create commment
 router.post("/posts/:postId/comments", async (req, res, next) => {
@@ -41,13 +43,41 @@ router.post("/posts/:postId/comments", async (req, res, next) => {
 
   const isValid = await authenticateUser(body.userId, body.secret);
 
-  if (isValid) {
-    const post = await createComment(postId, body);
-    handleError(res, post);
-    res.status(201).json(post);
-  } else {
+  if (!isValid) {
     res.status(401).json({ error: "Unauthorized" });
+    return
   }
+
+  const comment = await createComment(postId, body);
+
+  // get users for notifications
+  // get user from post
+  const year = postId.split('-')[0]
+  if (year.length !== 4) {
+    // TODO dont throw error just warning
+    res.status(400).json({ error: "Unable to retrieve post without year" })
+    return
+  }
+  const post = await getPostById(year, postId)
+
+  // and all users from commments
+  const comments = await getCommentsByPostId(postId)
+
+  // create notification for every user that has comment on post
+  // only if their notification settings are on
+
+  // use hash table for constant time lookup
+  const userTable = { [post.user]: null }
+  comments.forEach(comment => {
+    if (!userTable[comment.user.split('#')[1]]) userTable[comment.user.split('#')[1]] = null
+  })
+
+  for (let user of Object.keys(userTable)) {
+    await createNotification(postId, post.title, user)
+  }
+
+
+  res.status(201).json(comment);
 });
 
 // delete comment

@@ -44,6 +44,8 @@ exports.getPostById = async (year, postId) => {
         }
     }
     const post = await this.getFromDatabase(params)
+    console.error('params for error')
+    console.log(params)
     if (post.length === 0) throw new error.NotFound(`post with id ${postId} not found`)
     if (post.length > 1) throw new error.ServerError(`multiple posts with id ${postId} found`)
     return post[0]

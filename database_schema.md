@@ -10,11 +10,20 @@
     *every postId starts with the year IE 2023-{postId}
 
 ## Comments
-    -**PK**: POST#{postId}
+    -**PK**: COMMENT#POST#{postId}
     -**SK**: COMMENT#{commentId}
 
 ## Users
     -**PK**: USER#{userId}
+
+## Notifications
+    -**PK**: NOTIFICATION#USER#{userId}
+    -**SK**: NOTIFICATION#{notificationId}
+    -**postId**: POST#{postId}
+    -**postTitle**: title
+
+
+notifications: get by userId
 
 
 

@@ -1,5 +1,7 @@
 // function checks if post request has required fields
 exports.validateRequiredPostFields = (requirements, fields) => {
+    console.log('here are requirements')
+    console.log(requirements)
     for (let fieldName in requirements) {
         for (let requirement in requirements[fieldName]) {
             switch (requirement) {
@@ -30,7 +32,7 @@ exports.validateRequiredPostFields = (requirements, fields) => {
                                 error: `${fieldName} must be a number`
                             }
                         }
-                    } else {
+                    } else if (requirements[fieldName].type) {
                         return {
                             error: "Server Error: unknown type required"
                         }
