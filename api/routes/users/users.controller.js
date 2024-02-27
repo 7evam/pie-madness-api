@@ -88,4 +88,40 @@ router.put('/users/:userId', async (req, res, next) => {
     }
 })
 
+// import profile
+router.post('/users/import-profile', async (req, res, next) => {
+    try {
+        const { userId, secret } = req.body
+
+        const validationErrors = validateRequiredPostFields({
+            'userId': {
+                required: true,
+                notEmpty: true
+            },
+            'secret': {
+                required: true,
+                notEmpty: true
+            }
+        }, req.body)
+
+        if (validationErrors.error) {
+            res.status(400).json(validationErrors)
+            return
+        }
+
+        const isValid = await authenticateUser(userId, secret)
+
+        if (!isValid) {
+            res.status(401).json({ error: 'Unauthorized' })
+            return
+        }
+
+        const user = await getUserInfo(userId, true)
+
+        res.status(200).json(user)
+    } catch (e) {
+        next(e)
+    }
+})
+
 module.exports = router
