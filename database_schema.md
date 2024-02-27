@@ -22,12 +22,6 @@
     -**postId**: POST#{postId}
     -**postTitle**: title
 
-
-notifications: get by userId
-
-
-
-
 to delete poll:
 patch request on post
 {
@@ -44,3 +38,5 @@ patch request on post
 
 to add poll:
 patch request on post
+OR
+include poll in initial post request for post
