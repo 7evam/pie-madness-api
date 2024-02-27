@@ -6,6 +6,7 @@ const postsRoutes = require('./routes/posts/posts.controller')
 const commentsRoutes = require('./routes/comments/comments.controller')
 const usersRoutes = require('./routes/users/users.controller')
 const notificationsRoutes = require('./routes/notifications/notifications.controller')
+const s3uploadRoutes = require('./routes/s3upload/s3upload.controller')
 
 const { errorHandler } = require('./services/error')
 
@@ -31,10 +32,7 @@ app.use('/', postsRoutes)
 app.use('/', commentsRoutes)
 app.use('/', usersRoutes)
 app.use('/', notificationsRoutes)
+app.use('/', s3uploadRoutes)
 app.use(errorHandler)
-
-// app.use('/', pollsRoutes)
-
-// app.use('/', commentsRoutes)
 
 module.exports = app;
